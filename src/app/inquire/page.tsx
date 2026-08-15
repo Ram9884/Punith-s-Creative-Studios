@@ -1,0 +1,194 @@
+"use client";
+
+import React, { useState } from "react";
+import { MessageCircle, Phone, MapPin, Send, Check, Calendar } from "lucide-react";
+
+export default function InquirePage() {
+  const [submitted, setSubmitted] = useState(false);
+  const [weddingDate, setWeddingDate] = useState("");
+  const [availabilityStatus, setAvailabilityStatus] = useState<string | null>(null);
+
+  const handleDateCheck = (date: string) => {
+    setWeddingDate(date);
+    if (date) {
+      setAvailabilityStatus("Dates around this weekend are filling fast. Submit inquiry to reserve.");
+    } else {
+      setAvailabilityStatus(null);
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  return (
+    <main className="max-w-7xl mx-auto px-6 pt-32 pb-24">
+      <div className="max-w-3xl space-y-4 mb-12">
+        <span className="text-xs uppercase tracking-widest text-studio-gold">Start The Conversation</span>
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Let's Tell Your Story.</h1>
+        <p className="text-sm text-studio-muted font-light leading-relaxed">
+          Tell us about your celebration. We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {/* Contact Info Sidebar */}
+        <div className="space-y-8 lg:col-span-1">
+          <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
+            <h3 className="font-serif text-xl text-studio-ivory">Direct Inquiries</h3>
+
+            <div className="space-y-4 text-xs">
+              <a
+                href="https://wa.me/918217521582?text=Hello%20Studio%20One,%20I'd%20like%20to%20check%20availability%20for%20a%20booking."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                  <MessageCircle className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-studio-ivory font-medium">WhatsApp (Instant)</p>
+                  <p>+91 821-7521582</p>
+                </div>
+              </a>
+
+              <a
+                href="tel:8217521582"
+                className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-studio-ivory font-medium">Call Studio</p>
+                  <p>+91 821-7521582</p>
+                </div>
+              </a>
+
+              <div className="flex items-center gap-3 text-studio-muted">
+                <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div>
+                  <p className="text-studio-ivory font-medium">Base Studio</p>
+                  <p>Bangalore • Available Worldwide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl border border-studio-border/60 bg-studio-card/30 text-xs text-studio-muted space-y-2">
+            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Note for peak wedding dates</p>
+            <p className="font-light leading-relaxed">
+              Wedding season dates between November and February book 6 to 9 months in advance. We recommend locking dates early.
+            </p>
+          </div>
+        </div>
+
+        {/* Form & Date Availability Checker */}
+        <div className="lg:col-span-2">
+          {submitted ? (
+            <div className="p-12 rounded-2xl bg-studio-card border border-studio-gold/40 text-center space-y-4">
+              <div className="w-12 h-12 rounded-full bg-studio-gold/20 text-studio-gold flex items-center justify-center mx-auto">
+                <Check className="w-6 h-6" />
+              </div>
+              <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
+              <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed">
+                Thank you for reaching out. We will review date availability and get back to you via WhatsApp or call within 24 hours.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-2xl bg-studio-card border border-studio-border space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-studio-muted">Your Name *</label>
+                  <input
+                    required
+                    type="text"
+                    placeholder="e.g. Aditi Sharma"
+                    className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-studio-muted">Phone / WhatsApp Number *</label>
+                  <input
+                    required
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-studio-muted">Service Required *</label>
+                  <select
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
+                  >
+                    <option value="Weddings">Wedding Photography & Films</option>
+                    <option value="Pre-Wedding">Pre-Wedding Shoot</option>
+                    <option value="Films">Cinematic Wedding Film Only</option>
+                    <option value="Family">Family & Maternity</option>
+                    <option value="Events">Private Events & Sangeet</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-studio-muted flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-studio-gold" />
+                    <span>Wedding / Event Date *</span>
+                  </label>
+                  <input
+                    required
+                    type="date"
+                    value={weddingDate}
+                    onChange={(e) => handleDateCheck(e.target.value)}
+                    className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
+                  />
+                </div>
+              </div>
+
+              {availabilityStatus && (
+                <div className="p-3 rounded-lg bg-studio-gold/10 border border-studio-gold/30 text-xs text-studio-gold flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-studio-gold animate-ping" />
+                  <span>{availabilityStatus}</span>
+                </div>
+              )}
+
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-wider text-studio-muted">Event Venues & City</label>
+                <input
+                  type="text"
+                  placeholder="e.g. The Leela Palace, Bangalore"
+                  className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-wider text-studio-muted">Tell us about your celebration</label>
+                <textarea
+                  rows={4}
+                  placeholder="Share details about your wedding events, guest count, or visual style..."
+                  className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"
+              >
+                <span>Submit Inquiry & Check Availability</span>
+                <Send className="w-3.5 h-3.5" />
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </main>
+  );
+}
