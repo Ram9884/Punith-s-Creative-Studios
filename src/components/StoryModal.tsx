@@ -43,7 +43,7 @@ export const StoryModal = ({ item, onClose }: StoryModalProps) => {
 
           {/* Media Header */}
           <div className="relative h-[55vh] sm:h-[65vh] w-full bg-black">
-            {item.category === "Films" && item.videoUrl ? (
+            {item.videoUrl ? (
               <div className="relative w-full h-full flex items-center justify-center">
                 <video
                   src={item.videoUrl}

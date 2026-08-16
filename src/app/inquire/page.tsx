@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { MessageCircle, Phone, MapPin, Send, Check, Calendar } from "lucide-react";
+import { BRAND_INFO } from "@/data/content";
 
 export default function InquirePage() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,13 +23,17 @@ export default function InquirePage() {
     setSubmitted(true);
   };
 
+  const whatsappMessage = encodeURIComponent(
+    `Hello CLIQ Photography, I'm inquiring about date availability for ${weddingDate || "my wedding"}.`
+  );
+
   return (
     <main className="max-w-7xl mx-auto px-6 pt-32 pb-24">
       <div className="max-w-3xl space-y-4 mb-12">
-        <span className="text-xs uppercase tracking-widest text-studio-gold">Start The Conversation</span>
-        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Let's Tell Your Story.</h1>
+        <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">Start The Conversation</span>
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Your Story. Our Cliq.</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          Tell us about your celebration. We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
+          Tell us about your celebration. CLIQ Photography accepts a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
         </p>
       </div>
 
@@ -36,11 +41,11 @@ export default function InquirePage() {
         {/* Contact Info Sidebar */}
         <div className="space-y-8 lg:col-span-1">
           <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
-            <h3 className="font-serif text-xl text-studio-ivory">Direct Inquiries</h3>
+            <h3 className="font-serif text-xl text-studio-ivory font-medium">Direct Inquiries</h3>
 
             <div className="space-y-4 text-xs">
               <a
-                href="https://wa.me/918217521582?text=Hello%20Studio%20One,%20I'd%20like%20to%20check%20availability%20for%20a%20booking."
+                href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
@@ -49,13 +54,13 @@ export default function InquirePage() {
                   <MessageCircle className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-studio-ivory font-medium">WhatsApp (Instant)</p>
-                  <p>+91 821-7521582</p>
+                  <p className="text-studio-ivory font-medium">WhatsApp (Instant Chat)</p>
+                  <p className="text-studio-gold font-medium">{BRAND_INFO.contact.phone}</p>
                 </div>
               </a>
 
               <a
-                href="tel:8217521582"
+                href={`tel:${BRAND_INFO.contact.phoneRaw}`}
                 className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
               >
                 <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
@@ -63,26 +68,26 @@ export default function InquirePage() {
                 </div>
                 <div>
                   <p className="text-studio-ivory font-medium">Call Studio</p>
-                  <p>+91 821-7521582</p>
+                  <p>{BRAND_INFO.contact.phone}</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-3 text-studio-muted">
-                <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
+              <div className="flex items-start gap-3 text-studio-muted">
+                <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <p className="text-studio-ivory font-medium">Base Studio</p>
-                  <p>Bangalore • Available Worldwide</p>
+                  <p className="text-studio-ivory font-medium">Studio Location</p>
+                  <p className="text-[11px] leading-relaxed mt-0.5">{BRAND_INFO.contact.address}</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="p-6 rounded-2xl border border-studio-border/60 bg-studio-card/30 text-xs text-studio-muted space-y-2">
-            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Note for peak wedding dates</p>
+            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Peak Season Notice</p>
             <p className="font-light leading-relaxed">
-              Wedding season dates between November and February book 6 to 9 months in advance. We recommend locking dates early.
+              Wedding season dates between October and March fill quickly. We recommend reserving dates 4 to 8 months in advance.
             </p>
           </div>
         </div>
@@ -95,29 +100,29 @@ export default function InquirePage() {
                 <Check className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
-              <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed">
-                Thank you for reaching out. We will review date availability and get back to you via WhatsApp or call within 24 hours.
+              <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed font-light">
+                Thank you for reaching out. CLIQ Photography will review date availability and get back to you via WhatsApp or call within 24 hours.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-2xl bg-studio-card border border-studio-border space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-studio-muted">Your Name *</label>
+                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Your Name *</label>
                   <input
                     required
                     type="text"
-                    placeholder="e.g. Aditi Sharma"
+                    placeholder="e.g. Ananya & Siddharth"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-studio-muted">Phone / WhatsApp Number *</label>
+                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Phone / WhatsApp Number *</label>
                   <input
                     required
                     type="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 98403 18800"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
@@ -125,21 +130,22 @@ export default function InquirePage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-studio-muted">Service Required *</label>
+                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Category *</label>
                   <select
                     required
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   >
-                    <option value="Weddings">Wedding Photography & Films</option>
-                    <option value="Pre-Wedding">Pre-Wedding Shoot</option>
-                    <option value="Films">Cinematic Wedding Film Only</option>
-                    <option value="Family">Family & Maternity</option>
-                    <option value="Events">Private Events & Sangeet</option>
+                    <option value="Weddings">Weddings</option>
+                    <option value="Pre-Weddings">Pre-Weddings</option>
+                    <option value="Post-Weddings">Post-Weddings</option>
+                    <option value="Couples">Couples</option>
+                    <option value="Bridal">Bridal</option>
+                    <option value="Events">Events</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-studio-muted flex items-center gap-1.5">
+                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-studio-gold" />
                     <span>Wedding / Event Date *</span>
                   </label>
@@ -161,28 +167,28 @@ export default function InquirePage() {
               )}
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-studio-muted">Event Venues & City</label>
+                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Venues & City</label>
                 <input
                   type="text"
-                  placeholder="e.g. The Leela Palace, Bangalore"
+                  placeholder="e.g. Chetpet / ECR Estate, Chennai"
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-studio-muted">Tell us about your celebration</label>
+                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Tell us about your story & vision</label>
                 <textarea
                   rows={4}
-                  placeholder="Share details about your wedding events, guest count, or visual style..."
+                  placeholder="Share details about your events, vision, or guest expectations..."
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
               >
-                <span>Submit Inquiry & Check Availability</span>
+                <span>Book Your Shoot</span>
                 <Send className="w-3.5 h-3.5" />
               </button>
             </form>
@@ -191,4 +197,4 @@ export default function InquirePage() {
       </div>
     </main>
   );
-}
+}

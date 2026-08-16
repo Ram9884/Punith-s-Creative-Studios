@@ -2,15 +2,16 @@
 
 import React, { useState } from "react";
 import { Calendar, MapPin, CheckCircle2, Sparkles, MessageCircle, ArrowRight } from "lucide-react";
+import { BRAND_INFO } from "@/data/content";
 
 const CITIES = [
+  "Chennai",
+  "Chetpet",
+  "Mahabalipuram",
+  "Pondicherry",
   "Bangalore",
   "Goa",
   "Udaipur",
-  "Jaipur",
-  "Mysore",
-  "Chennai",
-  "Kerala",
   "International Destination",
 ];
 
@@ -24,7 +25,7 @@ const MONTHS = [
 ];
 
 export const DateAvailabilityChecker = () => {
-  const [selectedCity, setSelectedCity] = useState("Bangalore");
+  const [selectedCity, setSelectedCity] = useState("Chennai");
   const [selectedMonth, setSelectedMonth] = useState("November 2026");
   const [isChecked, setIsChecked] = useState(false);
 
@@ -34,7 +35,7 @@ export const DateAvailabilityChecker = () => {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Studio One, I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if your team is open for bookings on my date!`
+    `Hello CLIQ Photography, I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if your team is open for bookings on my date!`
   );
 
   return (
@@ -48,13 +49,13 @@ export const DateAvailabilityChecker = () => {
           <div className="lg:col-span-5 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-studio-gold/30 bg-studio-gold/10 text-studio-gold text-xs uppercase tracking-widest font-medium">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Limited Commission Intake</span>
+              <span>Direct Booking Portal</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-studio-ivory leading-tight">
               Check Your Wedding Date & Venue Availability
             </h2>
             <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-              To ensure bespoke creative focus for every couple, Studio One accepts a maximum of 15 commissions per season across India.
+              To ensure bespoke creative focus for every couple, CLIQ Photography accepts a limited number of commissions per season across Tamil Nadu and destination venues.
             </p>
             <div className="pt-2 flex items-center gap-4 text-xs text-studio-gold/90">
               <div className="flex items-center gap-1.5">
@@ -125,11 +126,13 @@ export const DateAvailabilityChecker = () => {
             </form>
 
             {/* Availability Result Preview Box */}
-            <div className={`p-4 rounded-xl border transition-all duration-300 ${
-              isChecked 
-                ? "bg-emerald-950/20 border-emerald-500/40 text-emerald-200" 
-                : "bg-studio-card/60 border-studio-border/60 text-studio-muted"
-            }`}>
+            <div
+              className={`p-4 rounded-xl border transition-all duration-300 ${
+                isChecked
+                  ? "bg-emerald-950/20 border-emerald-500/40 text-emerald-200"
+                  : "bg-studio-card/60 border-studio-border/60 text-studio-muted"
+              }`}
+            >
               {isChecked ? (
                 <div className="space-y-3 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between">
@@ -142,11 +145,13 @@ export const DateAvailabilityChecker = () => {
                     </span>
                   </div>
                   <p className="text-xs text-studio-ivory font-light leading-relaxed">
-                    Great news! Our lead cinematography team has dates available in <strong className="text-studio-gold">{selectedCity}</strong> for <strong className="text-studio-gold">{selectedMonth}</strong>.
+                    Great news! Our lead photography & videography team has dates available in{" "}
+                    <strong className="text-studio-gold">{selectedCity}</strong> for{" "}
+                    <strong className="text-studio-gold">{selectedMonth}</strong>.
                   </p>
                   <div className="pt-1 flex flex-col sm:flex-row items-center gap-3">
                     <a
-                      href={`https://wa.me/918217521582?text=${whatsappMessage}`}
+                      href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
@@ -158,8 +163,10 @@ export const DateAvailabilityChecker = () => {
                 </div>
               ) : (
                 <div className="flex items-center justify-between text-xs font-light">
-                  <span>Select your venue location & target month to see instant team status.</span>
-                  <span className="text-studio-gold uppercase tracking-widest text-[10px] font-medium">Ready to Check</span>
+                  <span>Select your venue location & target month to check team status.</span>
+                  <span className="text-studio-gold uppercase tracking-widest text-[10px] font-medium">
+                    Ready to Check
+                  </span>
                 </div>
               )}
             </div>
@@ -169,3 +176,4 @@ export const DateAvailabilityChecker = () => {
     </section>
   );
 };
+

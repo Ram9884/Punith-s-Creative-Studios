@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Calendar, Menu, X } from "lucide-react";
+import { Calendar, Menu, X, Camera } from "lucide-react";
 import { ConsultationModal } from "@/components/ConsultationModal";
+import { BRAND_INFO } from "@/data/content";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -21,13 +22,17 @@ export function Navbar() {
       <header className="sticky top-0 z-50 border-b border-studio-border/80 bg-studio-bg/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3" aria-label="Studio One Productions home">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-studio-gold/50 bg-studio-card text-sm font-semibold tracking-[0.2em] text-studio-gold shadow-lg shadow-studio-gold/10">
-              S1
+          <Link href="/" className="flex items-center gap-3" aria-label="CLIQ Photography home">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-studio-gold/60 bg-studio-card text-studio-gold shadow-lg shadow-studio-gold/15">
+              <Camera className="w-5 h-5" />
             </div>
             <div className="leading-none">
-              <div className="font-serif text-2xl tracking-[0.08em] text-studio-ivory">Studio One</div>
-              <div className="mt-1 text-[10px] uppercase tracking-[0.25em] text-studio-muted">Productions</div>
+              <div className="font-serif text-2xl tracking-[0.06em] text-studio-ivory font-medium">
+                CLIQ <span className="text-studio-gold font-light">Photography</span>
+              </div>
+              <div className="mt-1 text-[9px] uppercase tracking-[0.22em] text-studio-muted">
+                {BRAND_INFO.positioning}
+              </div>
             </div>
           </Link>
 
@@ -44,14 +49,14 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Right Action: Schedule Consultation Button */}
+          {/* Right Action: Book Your Shoot Button */}
           <div className="hidden sm:flex items-center gap-4">
             <button
               onClick={() => setConsultationOpen(true)}
-              className="rounded-full border border-studio-gold/60 bg-studio-gold/10 hover:bg-studio-gold px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-studio-gold hover:text-studio-bg transition-all duration-300 flex items-center gap-2 shadow-lg shadow-studio-gold/10 hover:shadow-studio-gold/20 font-semibold"
+              className="rounded-full border border-studio-gold bg-studio-gold text-studio-bg hover:brightness-110 px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-studio-gold/20"
             >
               <Calendar className="w-3.5 h-3.5" />
-              <span>Book Consultation</span>
+              <span>Book Your Shoot</span>
             </button>
           </div>
 
@@ -59,8 +64,8 @@ export function Navbar() {
           <div className="flex items-center gap-3 md:hidden">
             <button
               onClick={() => setConsultationOpen(true)}
-              className="rounded-full border border-studio-gold/60 bg-studio-gold/10 p-2 text-studio-gold"
-              aria-label="Book Consultation"
+              className="rounded-full border border-studio-gold bg-studio-gold/15 p-2 text-studio-gold"
+              aria-label="Book Your Shoot"
             >
               <Calendar className="w-4 h-4" />
             </button>
@@ -99,7 +104,7 @@ export function Navbar() {
                 className="w-full py-3 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Book 15-Min Consultation</span>
+                <span>Book Your Shoot</span>
               </button>
             </div>
           </div>
@@ -111,3 +116,4 @@ export function Navbar() {
     </>
   );
 }
+

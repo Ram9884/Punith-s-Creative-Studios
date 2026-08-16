@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Camera, Film, Aperture, Sliders, Sparkles, Award } from "lucide-react";
 import Image from "next/image";
+import { BRAND_INFO } from "@/data/content";
 
 const CRAFT_TABS = [
   {
@@ -10,7 +11,7 @@ const CRAFT_TABS = [
     title: "4K Cinema Optics",
     icon: Camera,
     headline: "RED & Sony Full-Frame Cinema Cameras",
-    description: "We utilize high dynamic range digital cinema cameras paired with Leica and Zeiss prime lenses to deliver true filmic texture, rich skin tones, and incredible low-light depth.",
+    description: "We utilize high dynamic range digital cinema cameras paired with prime lenses to deliver true filmic texture, rich skin tones, and incredible low-light depth.",
     stats: ["12-bit RAW Color", "60fps Slow Motion", "Dual ISO Low-Light"],
     image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
   },
@@ -19,7 +20,7 @@ const CRAFT_TABS = [
     title: "Master Color Science",
     icon: Sliders,
     headline: "Custom Color Grading & Film Emulation",
-    description: "Every frame undergoes bespoke color grading in DaVinci Resolve Studio. We blend warm skin tones with rich heritage gold hues for a timeless, editorial aesthetic.",
+    description: "Every frame undergoes bespoke color grading in DaVinci Resolve. We blend authentic skin tones with rich heritage gold hues for a timeless aesthetic.",
     stats: ["35mm Film Grain", "Custom LUT Pipeline", "Skin Tone Preservation"],
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop"
   },
@@ -28,7 +29,7 @@ const CRAFT_TABS = [
     title: "Aerial Cinematography",
     icon: Film,
     headline: "Licensed 4K Drone Perspectives",
-    description: "Capture the epic grandeur of heritage palaces, coastal beach cliffs, and lush outdoor mandaps from breathtaking high-angle aerial views.",
+    description: "Capture the epic grandeur of coastal beach resorts, heritage estates, and lush outdoor mandaps from breathtaking high-angle aerial views.",
     stats: ["4K HDR Aerial", "Smooth Stabilized Orbit", "Fully Licensed Operators"],
     image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1200&auto=format&fit=crop"
   },
@@ -37,7 +38,7 @@ const CRAFT_TABS = [
     title: "Candid Philosophy",
     icon: Aperture,
     headline: "Unobtrusive Documentary Storytelling",
-    description: "No forced smiles or staged poses. We move quietly in the background, allowing real tears, spontaneous laughter, and authentic ritual energy to unfold naturally.",
+    description: "No forced smiles or staged poses. CLIQ Photography moves quietly in the background, allowing real tears, spontaneous laughter, and authentic ritual energy to unfold naturally.",
     stats: ["Zero Staged Interruption", "Pure Natural Light", "Intimate Portraiture"],
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
   }
@@ -55,10 +56,10 @@ export const BehindTheLensCraft = () => {
           Behind The Lens
         </span>
         <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
-          Artistry, Optics & Technical Mastery
+          Artistry & Technical Craft
         </h2>
         <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-          How we combine state-of-the-art cinema technology with documentary sensitivity to produce heirloom visual art.
+          How CLIQ Photography combines cinema technology with documentary sensitivity to produce heirloom visual art.
         </p>
       </div>
 
@@ -87,7 +88,7 @@ export const BehindTheLensCraft = () => {
       {/* Active Tab Content Card */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-studio-card border border-studio-border rounded-3xl p-6 sm:p-10 overflow-hidden shadow-xl">
         <div className="lg:col-span-6 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-studio-gold/30 bg-studio-gold/10 text-studio-gold text-[11px] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-studio-gold/30 bg-studio-gold/10 text-studio-gold text-[11px] uppercase tracking-wider font-medium">
             <Sparkles className="w-3 h-3" />
             <span>{current.title}</span>
           </div>
@@ -123,3 +124,4 @@ export const BehindTheLensCraft = () => {
     </section>
   );
 };
+

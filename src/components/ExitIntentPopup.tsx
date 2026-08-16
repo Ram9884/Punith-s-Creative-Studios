@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Sparkles, Calendar } from "lucide-react";
+import { MessageCircle, X, Calendar } from "lucide-react";
+import { BRAND_INFO } from "@/data/content";
 
 export const ExitIntentPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,10 @@ export const ExitIntentPopup = () => {
     document.addEventListener("mouseleave", handleMouseLeave);
     return () => document.removeEventListener("mouseleave", handleMouseLeave);
   }, [hasTriggered]);
+
+  const whatsappUrl = `https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${encodeURIComponent(
+    "Hi CLIQ Photography, I'd like to check if my wedding date is available."
+  )}`;
 
   return (
     <AnimatePresence>
@@ -49,16 +54,16 @@ export const ExitIntentPopup = () => {
             </div>
 
             <div className="space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-studio-gold">Before You Go</span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Checking Dates for Your Wedding?</h3>
+              <span className="text-[10px] uppercase tracking-widest text-studio-gold font-medium">Before You Go</span>
+              <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Checking Dates for Your Special Day?</h3>
               <p className="text-xs text-studio-muted max-w-sm mx-auto font-light leading-relaxed">
-                Peak wedding dates book quickly. Drop us a quick WhatsApp with your event date to instantly check date availability.
+                Peak wedding dates book quickly. Drop CLIQ Photography a quick WhatsApp with your event date to check date availability instantly.
               </p>
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
-                href="https://wa.me/918217521582?text=Hi%20Studio%20One,%20I'd%20like%20to%20check%20if%20my%20wedding%20date%20is%20available."
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3 px-5 rounded-full bg-emerald-600 text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-emerald-500 transition-colors"
@@ -78,4 +83,4 @@ export const ExitIntentPopup = () => {
       )}
     </AnimatePresence>
   );
-};
+};

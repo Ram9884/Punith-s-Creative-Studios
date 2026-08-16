@@ -24,9 +24,10 @@ function PortfolioContent() {
     "All",
     "Weddings",
     "Pre-Weddings",
-    "Films",
+    "Post-Weddings",
+    "Couples",
+    "Bridal",
     "Events",
-    "Family"
   ];
 
   const filteredItems =
@@ -83,7 +84,7 @@ function PortfolioContent() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
-              {item.category === "Films" && (
+              {item.videoUrl && (
                 <div className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-studio-gold text-studio-bg flex items-center justify-center shadow-lg">
                   <Play className="w-4 h-4 fill-current ml-0.5" />
                 </div>

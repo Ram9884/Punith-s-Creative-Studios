@@ -19,8 +19,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Studio One Productions | Bangalore Wedding Photographer & Cinematic Films",
-  description: "Crafting timeless love stories, one frame at a time. Luxury wedding and destination photography based in Bangalore.",
+  title: "CLIQ Photography | Framing Love in Every Cliq | Premium Wedding Filmer",
+  description:
+    "Premium wedding photography and videography capturing candid moments and timeless stories from your special day in Chetpet, Chennai and worldwide.",
 };
 
 export default function RootLayout({
@@ -30,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${cormorant.variable} ${inter.variable} bg-studio-bg text-studio-ivory font-sans antialiased selection:bg-studio-gold/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}>
+      <body
+        className={`${cormorant.variable} ${inter.variable} bg-studio-bg text-studio-ivory font-sans antialiased selection:bg-studio-gold/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
+      >
         <Navbar />
         <div className="flex-grow">{children}</div>
         <Footer />
@@ -39,4 +42,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+}

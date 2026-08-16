@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { X, Calendar, Clock, Video, CheckCircle2, Sparkles, User, Phone, ArrowRight, MessageCircle } from "lucide-react";
+import { BRAND_INFO } from "@/data/content";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -57,7 +58,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hello Studio One Team, I scheduled a 15-min virtual consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
+    `Hello CLIQ Photography Team, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
   );
 
   const resetAndClose = () => {
@@ -76,7 +77,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 text-studio-gold" />
             <span className="text-xs uppercase tracking-[0.25em] text-studio-gold font-semibold">
-              Schedule 15-Min Virtual Call
+              Book Your Shoot Consultation
             </span>
           </div>
           <button
@@ -99,7 +100,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                   <span>1-on-1 Creative Consultation</span>
                 </div>
                 <p className="text-xs text-studio-muted font-light">
-                  Pick a convenient time to speak directly with our lead creative director about your wedding vision, dates, and customized packages.
+                  Pick a convenient time to speak directly with our team about your wedding vision, dates, and customized packages.
                 </p>
               </div>
 
@@ -217,7 +218,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 type="submit"
                 className="w-full py-3.5 rounded-xl bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
               >
-                <span>Confirm Virtual Call Slot</span>
+                <span>Confirm Call Slot</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -230,7 +231,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
 
               <div className="space-y-1">
                 <span className="text-[10px] uppercase tracking-widest text-studio-gold font-medium">Slot Reserved!</span>
-                <h3 className="font-serif text-2xl text-studio-ivory">Virtual Call Scheduled</h3>
+                <h3 className="font-serif text-2xl text-studio-ivory font-medium">Consultation Scheduled</h3>
                 <p className="text-xs text-studio-muted max-w-sm mx-auto font-light">
                   We look forward to speaking with you on <strong className="text-studio-gold">{selectedDate}</strong> at <strong className="text-studio-gold">{selectedTime}</strong>.
                 </p>
@@ -239,12 +240,12 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
               <div className="p-4 rounded-xl bg-studio-bg border border-studio-border text-left text-xs space-y-1.5 max-w-sm mx-auto">
                 <p className="text-studio-ivory"><strong>Topic:</strong> {selectedTopic}</p>
                 <p className="text-studio-ivory"><strong>Client Name:</strong> {name}</p>
-                <p className="text-studio-muted text-[11px]">Google Meet & WhatsApp invite link will be sent to <strong>{phone}</strong>.</p>
+                <p className="text-studio-muted text-[11px]">Invite & details will be sent to <strong>{phone}</strong>.</p>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/918217521582?text=${whatsappMsg}`}
+                  href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors"
@@ -267,3 +268,4 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
     </div>
   );
 };
+

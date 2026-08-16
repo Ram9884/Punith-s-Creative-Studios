@@ -2,13 +2,14 @@ export type PortfolioCategory =
   | "All"
   | "Weddings"
   | "Pre-Weddings"
-  | "Films"
-  | "Events"
-  | "Family";
+  | "Post-Weddings"
+  | "Couples"
+  | "Bridal"
+  | "Events";
 
 export interface PortfolioItem {
   id: number;
-  category: "Weddings" | "Pre-Weddings" | "Films" | "Events" | "Family";
+  category: "Weddings" | "Pre-Weddings" | "Post-Weddings" | "Couples" | "Bridal" | "Events";
   title: string;
   location: string;
   image: string;
@@ -34,6 +35,7 @@ export interface TestimonialItem {
   author: string;
   event: string;
   location: string;
+  rating?: number;
   image: string;
 }
 

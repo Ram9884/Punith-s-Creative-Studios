@@ -1,41 +1,85 @@
 import Link from "next/link";
+import { BRAND_INFO } from "@/data/content";
+import { MapPin, Phone, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="border-t border-studio-border bg-studio-card/60">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-[1.4fr_0.8fr_0.8fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-[1.4fr_0.8fr_1fr]">
         <div className="space-y-4">
-          <div className="font-serif text-3xl tracking-[0.08em] text-studio-ivory">Studio One</div>
-          <p className="max-w-md text-sm leading-relaxed text-studio-muted">
-            Luxury wedding photography and cinematic films for intimate celebrations, destination stories, and unforgettable family milestones.
+          <div>
+            <div className="font-serif text-3xl tracking-[0.06em] text-studio-ivory font-medium">
+              CLIQ <span className="text-studio-gold font-light">Photography</span>
+            </div>
+            <p className="text-xs uppercase tracking-[0.22em] text-studio-gold font-medium mt-1">
+              {BRAND_INFO.heroTagline}
+            </p>
+          </div>
+          <p className="max-w-md text-xs leading-relaxed text-studio-muted font-light">
+            {BRAND_INFO.footer.subtext}
           </p>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-[10px] uppercase tracking-[0.28em] text-studio-gold">Explore</h3>
-          <div className="space-y-2 text-sm text-studio-muted">
-            <Link href="/portfolio" className="block hover:text-studio-gold">Portfolio</Link>
-            <Link href="/services" className="block hover:text-studio-gold">Services</Link>
-            <Link href="/inquire" className="block hover:text-studio-gold">Inquire</Link>
+          <h3 className="text-[10px] uppercase tracking-[0.28em] text-studio-gold font-semibold">
+            Explore
+          </h3>
+          <div className="space-y-2.5 text-xs text-studio-muted">
+            <Link href="/" className="block hover:text-studio-gold transition-colors">
+              Home
+            </Link>
+            <Link href="/portfolio" className="block hover:text-studio-gold transition-colors">
+              Portfolio
+            </Link>
+            <Link href="/services" className="block hover:text-studio-gold transition-colors">
+              Services
+            </Link>
+            <Link href="/inquire" className="block hover:text-studio-gold transition-colors">
+              Book Your Shoot
+            </Link>
           </div>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-[10px] uppercase tracking-[0.28em] text-studio-gold">Connect</h3>
-          <div className="space-y-2 text-sm text-studio-muted">
-            <a href="mailto:hello@studiooneproductions.com" className="block hover:text-studio-gold">hello@studiooneproductions.com</a>
-            <a href="tel:+919876543210" className="block hover:text-studio-gold">+91 98765 43210</a>
-            <span className="block">Bangalore, India</span>
+          <h3 className="text-[10px] uppercase tracking-[0.28em] text-studio-gold font-semibold">
+            Contact & Studio
+          </h3>
+          <div className="space-y-3 text-xs text-studio-muted font-light">
+            <div className="flex items-start gap-2.5">
+              <MapPin className="w-4 h-4 text-studio-gold flex-shrink-0 mt-0.5" />
+              <span>{BRAND_INFO.contact.address}</span>
+            </div>
+            <div className="flex items-center gap-2.5">
+              <Phone className="w-4 h-4 text-studio-gold flex-shrink-0" />
+              <a
+                href={`tel:${BRAND_INFO.contact.phoneRaw}`}
+                className="hover:text-studio-gold transition-colors font-medium text-studio-ivory"
+              >
+                {BRAND_INFO.contact.phone}
+              </a>
+            </div>
+            <div className="flex items-center gap-2.5">
+              <Instagram className="w-4 h-4 text-studio-gold flex-shrink-0" />
+              <a
+                href={BRAND_INFO.contact.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-studio-gold transition-colors font-medium text-studio-gold"
+              >
+                {BRAND_INFO.contact.instagram}
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-studio-border/80">
+      <div className="border-t border-studio-border/80 bg-studio-bg/40">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-[10px] uppercase tracking-[0.22em] text-studio-muted sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Studio One Productions</span>
-          <span>Crafting stories that last</span>
+          <span>© {new Date().getFullYear()} CLIQ Photography. All rights reserved.</span>
+          <span>{BRAND_INFO.heroTagline}</span>
         </div>
       </div>
     </footer>
   );
 }
+
