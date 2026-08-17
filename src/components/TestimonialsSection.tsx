@@ -42,7 +42,7 @@ export const TestimonialsSection = () => {
 
               <div className="flex items-center gap-3.5 pt-4 border-t border-studio-border/60">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden border border-studio-gold/40">
-                  <Image src={t.image} alt={t.author} fill className="object-cover" />
+                  <Image src={t.image} alt={t.author} fill sizes="44px" className="object-cover" />
                 </div>
                 <div>
                   <h4 className="font-serif text-base text-studio-ivory font-semibold">{t.author}</h4>

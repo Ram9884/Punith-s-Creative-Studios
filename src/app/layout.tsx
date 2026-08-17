@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   title: "CLIQ Photography | Framing Love in Every Cliq | Premium Wedding Filmer",
   description:
     "Premium wedding photography and videography capturing candid moments and timeless stories from your special day in Chetpet, Chennai and worldwide.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${cormorant.variable} ${inter.variable} bg-studio-bg text-studio-ivory font-sans antialiased selection:bg-studio-gold/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
       >

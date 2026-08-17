@@ -25,6 +25,7 @@ export default function HomePage() {
             src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop"
             alt="CLIQ Photography Hero Background"
             fill
+            sizes="100vw"
             priority
             className="object-cover opacity-30 filter contrast-125 brightness-90"
           />
@@ -91,6 +92,7 @@ export default function HomePage() {
                 src={item.image}
                 alt={item.title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
@@ -144,6 +146,7 @@ export default function HomePage() {
                     src={film.image}
                     alt={film.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -215,6 +218,7 @@ export default function HomePage() {
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"
               alt="CLIQ Photography About Moment"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

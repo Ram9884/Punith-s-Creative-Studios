@@ -56,7 +56,7 @@ export const StoryModal = ({ item, onClose }: StoryModalProps) => {
               </div>
             ) : (
               <>
-                <Image src={item.image} alt={item.title} fill className="object-cover" />
+                <Image src={item.image} alt={item.title} fill sizes="(max-width: 1024px) 100vw, 80vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-studio-card via-black/30 to-transparent" />
               </>
             )}

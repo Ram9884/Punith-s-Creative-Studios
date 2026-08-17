@@ -40,6 +40,7 @@ export const SocialMoments = () => {
               src={moment.image}
               alt="CLIQ Photography Social Moment"
               fill
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 16vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

@@ -116,6 +116,7 @@ export const BehindTheLensCraft = () => {
             src={current.image}
             alt={current.title}
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover transition-all duration-700 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

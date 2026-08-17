@@ -39,6 +39,7 @@ export const ColorGradingSlider = () => {
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop"
               alt="Studio One Signature Grade"
               fill
+              sizes="(max-width: 1024px) 100vw, 80vw"
               className="object-cover"
             />
             <span className="absolute bottom-4 right-4 z-10 px-3 py-1 rounded-md bg-black/70 text-[10px] uppercase tracking-widest text-studio-gold font-semibold">
@@ -55,6 +56,7 @@ export const ColorGradingSlider = () => {
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop"
               alt="Raw Camera Capture"
               fill
+              sizes="(max-width: 1024px) 100vw, 80vw"
               className="object-cover filter contrast-75 brightness-90 saturate-50"
             />
             <span className="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-md bg-black/70 text-[10px] uppercase tracking-widest text-studio-muted font-semibold">
