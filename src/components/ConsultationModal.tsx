@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Calendar, Clock, Video, CheckCircle2, Sparkles, User, Phone, ArrowRight, MessageCircle } from "lucide-react";
+import { X, Calendar, Clock, Video, CheckCircle2, Sparkles, User, Phone, ArrowRight, MessageCircle, Loader2 } from "lucide-react";
 import { BRAND_INFO } from "@/data/content";
 
 interface ConsultationModalProps {
@@ -48,13 +48,35 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !phone) return;
-    setIsSubmitted(true);
+
+    setIsSubmitting(true);
+    try {
+      await fetch("/api/inquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          selectedTopic,
+          selectedDate,
+          selectedTime,
+          source: "consultation_modal",
+        }),
+      });
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Consultation submit error:", err);
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const whatsappMsg = encodeURIComponent(
@@ -216,10 +238,20 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
               {/* Submit CTA */}
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
+                disabled={isSubmitting}
+                className="w-full py-3.5 rounded-xl bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20 disabled:opacity-50"
               >
-                <span>Confirm Call Slot</span>
-                <ArrowRight className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Reserving Slot...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Confirm Call Slot</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           ) : (

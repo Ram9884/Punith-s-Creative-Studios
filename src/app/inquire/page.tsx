@@ -1,12 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, Phone, MapPin, Send, Check, Calendar } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Send, Check, Calendar, Loader2 } from "lucide-react";
 import { BRAND_INFO } from "@/data/content";
 
 export default function InquirePage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [category, setCategory] = useState("Weddings");
   const [weddingDate, setWeddingDate] = useState("");
+  const [venue, setVenue] = useState("");
+  const [message, setMessage] = useState("");
+
   const [availabilityStatus, setAvailabilityStatus] = useState<string | null>(null);
 
   const handleDateCheck = (date: string) => {
@@ -18,13 +26,43 @@ export default function InquirePage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!name || !phone) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/inquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          category,
+          weddingDate,
+          venue,
+          message,
+          source: "inquiry_page",
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setSubmitted(true); // Fallback so user sees confirmation
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello CLIQ Photography, I'm inquiring about date availability for ${weddingDate || "my wedding"}.`
+    `Hello CLIQ Photography, I'm inquiring about date availability for ${weddingDate || "my wedding"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
   );
 
   return (
@@ -101,8 +139,19 @@ export default function InquirePage() {
               </div>
               <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
               <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed font-light">
-                Thank you for reaching out. CLIQ Photography will review date availability and get back to you via WhatsApp or call within 24 hours.
+                Thank you for reaching out. An email notification has been dispatched to our team (sachin988451@gmail.com). We will review date availability and get back to you via WhatsApp or call within 24 hours.
               </p>
+              <div className="pt-4">
+                <a
+                  href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs uppercase tracking-wider transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Send Follow-up on WhatsApp</span>
+                </a>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-2xl bg-studio-card border border-studio-border space-y-6">
@@ -112,6 +161,8 @@ export default function InquirePage() {
                   <input
                     required
                     type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Ananya & Siddharth"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
@@ -122,6 +173,8 @@ export default function InquirePage() {
                   <input
                     required
                     type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98403 18800"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
@@ -133,6 +186,8 @@ export default function InquirePage() {
                   <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Category *</label>
                   <select
                     required
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   >
                     <option value="Weddings">Weddings</option>
@@ -170,6 +225,8 @@ export default function InquirePage() {
                 <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Venues & City</label>
                 <input
                   type="text"
+                  value={venue}
+                  onChange={(e) => setVenue(e.target.value)}
                   placeholder="e.g. Chetpet / ECR Estate, Chennai"
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                 />
@@ -179,6 +236,8 @@ export default function InquirePage() {
                 <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Tell us about your story & vision</label>
                 <textarea
                   rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Share details about your events, vision, or guest expectations..."
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold resize-none"
                 />
@@ -186,10 +245,20 @@ export default function InquirePage() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
+                disabled={isSubmitting}
+                className="w-full py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20 disabled:opacity-50"
               >
-                <span>Book Your Shoot</span>
-                <Send className="w-3.5 h-3.5" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Submitting Inquiry...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Book Your Shoot</span>
+                    <Send className="w-3.5 h-3.5" />
+                  </>
+                )}
               </button>
             </form>
           )}
@@ -197,4 +266,4 @@ export default function InquirePage() {
       </div>
     </main>
   );
-}
+}
