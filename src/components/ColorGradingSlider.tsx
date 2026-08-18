@@ -15,7 +15,7 @@ export const ColorGradingSlider = () => {
   };
 
   return (
-    <section className="py-20 bg-studio-card/30 border-y border-studio-border">
+    <section className="py-12 sm:py-16 bg-studio-card/30 border-y border-studio-border">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-studio-border bg-studio-card text-studio-gold text-xs">

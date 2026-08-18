@@ -3,7 +3,7 @@ import { EXPERIENCE_STEPS } from "@/data/content";
 
 export const ExperienceSection = () => {
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <span className="text-xs uppercase tracking-widest text-studio-gold">The Journey</span>
         <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">The Studio One Experience</h2>

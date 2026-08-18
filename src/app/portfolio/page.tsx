@@ -36,7 +36,7 @@ function PortfolioContent() {
       : PORTFOLIO_ITEMS.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 pt-32 pb-24">
+    <div className="max-w-7xl mx-auto px-6 pt-10 sm:pt-14 pb-16">
       <div className="space-y-4 max-w-3xl mb-12">
         <span className="text-xs uppercase tracking-widest text-studio-gold">Visual Archive</span>
         <h1 className="font-serif text-4xl sm:text-6xl font-normal">Our Portfolio & Films</h1>
@@ -117,7 +117,7 @@ function PortfolioContent() {
 
 export default function PortfolioPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen pt-32 text-center text-xs text-studio-muted">Loading archive...</div>}>
+    <Suspense fallback={<div className="min-h-screen pt-16 text-center text-xs text-studio-muted">Loading archive...</div>}>
       <PortfolioContent />
     </Suspense>
   );

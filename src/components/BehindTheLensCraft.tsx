@@ -50,7 +50,7 @@ export const BehindTheLensCraft = () => {
   const current = CRAFT_TABS.find((t) => t.id === activeTab) || CRAFT_TABS[0];
 
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6 border-t border-studio-border/60">
+    <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 border-t border-studio-border/60">
       <div className="text-center space-y-3 max-w-2xl mx-auto mb-12">
         <span className="text-xs uppercase tracking-[0.25em] text-studio-gold font-medium block">
           Behind The Lens

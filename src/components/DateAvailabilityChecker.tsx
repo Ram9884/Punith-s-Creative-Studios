@@ -39,7 +39,7 @@ export const DateAvailabilityChecker = () => {
   );
 
   return (
-    <section className="py-20 max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
       <div className="relative rounded-3xl bg-gradient-to-br from-studio-card via-studio-card/80 to-studio-bg border border-studio-gold/40 p-8 sm:p-12 shadow-2xl overflow-hidden">
         {/* Background decorative glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-studio-gold/5 rounded-full filter blur-3xl pointer-events-none" />

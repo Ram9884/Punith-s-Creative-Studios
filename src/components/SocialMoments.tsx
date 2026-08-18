@@ -5,7 +5,7 @@ import { SOCIAL_MOMENTS, BRAND_INFO } from "@/data/content";
 
 export const SocialMoments = () => {
   return (
-    <section className="py-20 max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
         <div>
           <span className="text-xs uppercase tracking-widest text-studio-gold block mb-1 font-medium">

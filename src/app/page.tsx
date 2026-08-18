@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-studio-bg text-studio-ivory">
       {/* 1. CINEMATIC WEDDING HERO */}
-      <section className="relative min-h-[92vh] flex items-center justify-center pt-20 px-6 overflow-hidden">
+      <section className="relative min-h-[75vh] flex items-center justify-center pt-10 sm:pt-14 pb-12 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop"
@@ -65,7 +65,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. STRONG PORTFOLIO */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
             <span className="text-xs uppercase tracking-widest text-studio-gold block mb-2 font-medium">
@@ -112,7 +112,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. WEDDING FILMS */}
-      <section className="py-20 bg-studio-card/40 border-y border-studio-border">
+      <section className="py-12 sm:py-16 bg-studio-card/40 border-y border-studio-border">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-2 max-w-2xl">
@@ -190,7 +190,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. ABOUT SECTION ("Your Story. Our Cliq.") */}
-      <section className="py-24 max-w-7xl mx-auto px-6 border-b border-studio-border/60">
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 border-b border-studio-border/60">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs uppercase tracking-widest text-studio-gold font-medium block">
@@ -238,7 +238,7 @@ export default function HomePage() {
       <ColorGradingSlider />
 
       {/* 5. SERVICES OVERVIEW */}
-      <section className="py-24 max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
             Our Offerings
@@ -315,7 +315,7 @@ export default function HomePage() {
       {/* 8. ENQUIRY CTA & DATE CHECKER */}
       <DateAvailabilityChecker />
 
-      <section className="py-20 max-w-7xl mx-auto px-6 text-center">
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 text-center">
         <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-studio-card to-studio-bg border border-studio-gold/40 space-y-6 max-w-4xl mx-auto shadow-2xl">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
             Reserve Your Wedding Date

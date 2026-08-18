@@ -66,7 +66,7 @@ export default function InquirePage() {
   );
 
   return (
-    <main className="max-w-7xl mx-auto px-6 pt-32 pb-24">
+    <main className="max-w-7xl mx-auto px-6 pt-10 sm:pt-14 pb-16">
       <div className="max-w-3xl space-y-4 mb-12">
         <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">Start The Conversation</span>
         <h1 className="font-serif text-4xl sm:text-6xl font-normal">Your Story. Our Cliq.</h1>
