@@ -22,15 +22,15 @@ export function Navbar() {
       <header className="sticky top-0 z-50 border-b border-studio-border/80 bg-studio-bg/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3" aria-label="CLIQ Photography home">
+          <Link href="/" className="flex items-center gap-3" aria-label="Photophactory Studios home">
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-studio-gold/60 bg-studio-card text-studio-gold shadow-lg shadow-studio-gold/15">
               <Camera className="w-5 h-5" />
             </div>
             <div className="leading-none">
-              <div className="font-serif text-2xl tracking-[0.06em] text-studio-ivory font-medium">
-                CLIQ <span className="text-studio-gold font-light">Photography</span>
+              <div className="font-serif text-xl sm:text-2xl tracking-[0.04em] text-studio-ivory font-medium">
+                Photophactory <span className="text-studio-gold font-light">Studios</span>
               </div>
-              <div className="mt-1 text-[9px] uppercase tracking-[0.22em] text-studio-muted">
+              <div className="mt-1 text-[9px] uppercase tracking-[0.20em] text-studio-muted">
                 {BRAND_INFO.positioning}
               </div>
             </div>
@@ -50,7 +50,7 @@ export function Navbar() {
           </nav>
 
           {/* Right Action: Book Your Shoot Button */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={() => setConsultationOpen(true)}
               className="rounded-full border border-studio-gold bg-studio-gold text-studio-bg hover:brightness-110 px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-studio-gold/20"
@@ -61,7 +61,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle Button */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-2.5 md:hidden">
             <button
               onClick={() => setConsultationOpen(true)}
               className="rounded-full border border-studio-gold bg-studio-gold/15 p-2 text-studio-gold"
@@ -95,7 +95,7 @@ export function Navbar() {
                 </Link>
               ))}
             </nav>
-            <div className="pt-2">
+            <div className="pt-2 flex items-center gap-3">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
@@ -110,6 +110,7 @@ export function Navbar() {
           </div>
         )}
       </header>
+
 
       {/* Consultation Modal */}
       <ConsultationModal isOpen={consultationOpen} onClose={() => setConsultationOpen(false)} />

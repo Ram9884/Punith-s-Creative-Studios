@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CALCULATOR_SERVICES } from "@/data/content";
+import { CALCULATOR_SERVICES, BRAND_INFO } from "@/data/content";
 import { Check, MessageCircle, Calculator, Sparkles } from "lucide-react";
 
 export const BudgetCalculator = () => {
@@ -27,7 +27,7 @@ export const BudgetCalculator = () => {
     .join(", ");
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Studio One, I customized a package estimate on your website for ₹${totalEstimate.toLocaleString("en-IN")}. Services: ${selectedNames}. Are our wedding dates available?`
+    `Hello Photophactory Studios, I customized a package estimate on your website for ₹${totalEstimate.toLocaleString("en-IN")}. Services: ${selectedNames}. Are our shoot dates available?`
   );
 
   return (
@@ -38,8 +38,8 @@ export const BudgetCalculator = () => {
             <Calculator className="w-3.5 h-3.5" />
             <span>Interactive Estimate Builder</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Customize Your Wedding Package</h3>
-          <p className="text-xs text-studio-muted font-light mt-1">Select the services you need for transparent ballpark pricing.</p>
+          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Customize Your Package</h3>
+          <p className="text-xs text-studio-muted font-light mt-1">Select the services you need for transparent ballpark pricing across Weddings, Events & Commercial Productions.</p>
         </div>
 
         <div className="p-4 rounded-xl bg-studio-bg border border-studio-gold/40 text-right min-w-[200px]">
@@ -84,10 +84,10 @@ export const BudgetCalculator = () => {
 
       <div className="pt-4 border-t border-studio-border flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs text-studio-muted max-w-md font-light">
-          * Travel and multi-city stay logistics are customized separately for destination weddings.
+          * Travel and multi-city stay logistics are customized separately for destination shoots.
         </p>
         <a
-          href={`https://wa.me/918217521582?text=${whatsappMessage}`}
+          href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto px-6 py-3 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"

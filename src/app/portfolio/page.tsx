@@ -25,9 +25,10 @@ function PortfolioContent() {
     "Weddings",
     "Pre-Weddings",
     "Post-Weddings",
+    "Events",
+    "Commercial",
     "Couples",
     "Bridal",
-    "Events",
   ];
 
   const filteredItems =

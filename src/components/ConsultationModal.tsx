@@ -10,9 +10,9 @@ interface ConsultationModalProps {
 }
 
 const CALL_TOPICS = [
-  "15-Min Wedding Vision & Package Overview",
-  "Pre-Wedding & Destination Shoot Planning",
-  "Custom Package & Budget Discussion",
+  "15-Min Project Vision & Package Overview",
+  "Weddings, Events & Commercial Production Planning",
+  "Custom Package & Investment Discussion",
 ];
 
 const TIME_SLOTS = [
@@ -80,7 +80,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hello CLIQ Photography Team, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
+    `Hello Photophactory Studios Team, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
   );
 
   const resetAndClose = () => {

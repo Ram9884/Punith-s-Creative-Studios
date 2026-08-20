@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-fraunces",
+  display: "swap",
 });
 
 const inter = Inter({
@@ -19,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CLIQ Photography | Framing Love in Every Cliq | Premium Wedding Filmer",
+  title: "Photophactory Studios | Weddings, Events & Commercial Production | Surat",
   description:
-    "Premium wedding photography and videography capturing candid moments and timeless stories from your special day in Chetpet, Chennai and worldwide.",
+    "Photophactory Studios specializes in Weddings, Pre-Weddings, Cultural & Corporate Events, Commercial Photography, and Video Production Services in Vesu, Surat.",
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
@@ -37,14 +38,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${cormorant.variable} ${inter.variable} bg-studio-bg text-studio-ivory font-sans antialiased selection:bg-studio-gold/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
+        className={`${fraunces.variable} ${inter.variable} bg-[#0a0a0a] text-[#f5f1ea] font-sans antialiased selection:bg-[#d4a574]/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
       >
-        <Navbar />
-        <div className="flex-grow">{children}</div>
-        <Footer />
-        <FloatingWhatsApp />
-        <ExitIntentPopup />
+        <ThemeProvider>
+          <Navbar />
+          <div className="flex-grow">{children}</div>
+          <Footer />
+          <FloatingWhatsApp />
+          <ExitIntentPopup />
+        </ThemeProvider>
       </body>
     </html>
   );
-}
+}
+

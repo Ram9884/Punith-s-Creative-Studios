@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Sparkles, ArrowRight, MapPin, Play, Star, Instagram, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MapPin, Play, CheckCircle2 } from "lucide-react";
 import { PORTFOLIO_ITEMS, WEDDING_FILMS, STATS, SERVICES, BRAND_INFO } from "@/data/content";
+import { HeroReel } from "@/components/HeroReel";
 import { ColorGradingSlider } from "@/components/ColorGradingSlider";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SocialMoments } from "@/components/SocialMoments";
@@ -14,58 +15,14 @@ import { PortfolioItem } from "@/types";
 
 export default function HomePage() {
   const [selectedStory, setSelectedStory] = useState<PortfolioItem | null>(null);
-  const [activeFilm, setActiveFilm] = useState<typeof WEDDING_FILMS[0] | null>(null);
 
   return (
     <main className="min-h-screen bg-studio-bg text-studio-ivory">
-      {/* 1. CINEMATIC WEDDING HERO */}
-      <section className="relative min-h-[75vh] flex items-center justify-center pt-10 sm:pt-14 pb-12 px-6 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop"
-            alt="CLIQ Photography Hero Background"
-            fill
-            sizes="100vw"
-            priority
-            className="object-cover opacity-30 filter contrast-125 brightness-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-studio-bg via-studio-bg/60 to-transparent" />
-        </div>
+      {/* 1. SCROLL-SCRUBBED HERO REEL */}
+      <HeroReel />
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-studio-gold/40 bg-studio-card/80 text-studio-gold text-xs tracking-wider font-medium shadow-lg backdrop-blur-md">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{BRAND_INFO.positioning} • Chetpet, Chennai</span>
-          </div>
-
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-tight tracking-tight">
-            {BRAND_INFO.heroTagline}
-          </h1>
-
-          <p className="max-w-2xl mx-auto text-studio-muted text-sm sm:text-base font-light leading-relaxed">
-            {BRAND_INFO.heroDescription}
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link
-              href="/inquire"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-xl shadow-studio-gold/20"
-            >
-              <span>{BRAND_INFO.heroCTA.primary}</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/portfolio"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-studio-border bg-studio-card/90 text-studio-ivory text-xs uppercase tracking-widest hover:border-studio-gold/60 transition-all flex items-center justify-center"
-            >
-              {BRAND_INFO.heroCTA.secondary}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. STRONG PORTFOLIO */}
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
+      {/* 2. FEATURED STORIES & FRAMES (PORTFOLIO) */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
           <div>
             <span className="text-xs uppercase tracking-widest text-studio-gold block mb-2 font-medium">
@@ -111,8 +68,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. WEDDING FILMS */}
-      <section className="py-12 sm:py-16 bg-studio-card/40 border-y border-studio-border">
+      {/* 3. CINEMATIC WEDDING FILMS */}
+      <section className="py-16 sm:py-24 bg-studio-card/40 border-y border-studio-border relative z-10">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-2 max-w-2xl">
@@ -189,12 +146,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. ABOUT SECTION ("Your Story. Our Cliq.") */}
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 border-b border-studio-border/60">
+      {/* 4. ABOUT SECTION */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 border-b border-studio-border/60 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs uppercase tracking-widest text-studio-gold font-medium block">
-              About CLIQ Photography
+              About Photophactory Studios
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory leading-tight">
               {BRAND_INFO.about.heading}
@@ -216,7 +173,7 @@ export default function HomePage() {
           <div className="lg:col-span-6 relative h-96 sm:h-[450px] rounded-3xl overflow-hidden border border-studio-border shadow-2xl">
             <Image
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"
-              alt="CLIQ Photography About Moment"
+              alt="Photophactory Studios About Moment"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -224,28 +181,28 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-studio-card/90 backdrop-blur-md border border-studio-border">
               <p className="font-serif text-lg text-studio-ivory italic">
-                "Framing Love in Every Cliq"
+                "{BRAND_INFO.heroTagline}"
               </p>
               <p className="text-[10px] uppercase tracking-widest text-studio-gold mt-1 font-medium">
-                Chetpet, Chennai • Available Worldwide
+                Vesu, Surat • Available Worldwide
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* COLOR GRADING CRAFT */}
+      {/* 5. COLOR GRADING CRAFT SLIDER */}
       <ColorGradingSlider />
 
-      {/* 5. SERVICES OVERVIEW */}
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
+      {/* 6. SERVICES OVERVIEW */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
             Our Offerings
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">Services & Craft</h2>
           <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-            Tailored photography and cinematic videography packages designed to preserve every dimension of your celebration.
+            Tailored photography and cinematic videography packages designed to preserve every dimension of your celebration or commercial project.
           </p>
         </div>
 
@@ -290,8 +247,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. SOCIAL PROOF & STATS */}
-      <section className="border-y border-studio-border bg-studio-card/40 py-12">
+      {/* 7. SOCIAL PROOF & STATS */}
+      <section className="border-y border-studio-border bg-studio-card/40 py-12 relative z-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {STATS.map((stat, i) => (
             <div key={i} className="space-y-1">
@@ -306,25 +263,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* INSTAGRAM SOCIAL MOMENTS */}
+      {/* 8. INSTAGRAM SOCIAL MOMENTS */}
       <SocialMoments />
 
-      {/* 7. TESTIMONIALS / REVIEWS */}
+      {/* 9. TESTIMONIALS / REVIEWS */}
       <TestimonialsSection />
 
-      {/* 8. ENQUIRY CTA & DATE CHECKER */}
+      {/* 10. ENQUIRY CTA & DATE CHECKER */}
       <DateAvailabilityChecker />
 
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 text-center">
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 text-center relative z-10">
         <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-studio-card to-studio-bg border border-studio-gold/40 space-y-6 max-w-4xl mx-auto shadow-2xl">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
-            Reserve Your Wedding Date
+            Reserve Your Dates
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
-            Ready to Tell Your Story with CLIQ?
+            Ready to Tell Your Story with Photophactory Studios?
           </h2>
           <p className="text-xs sm:text-sm text-studio-muted max-w-lg mx-auto font-light leading-relaxed">
-            We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
+            We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every client.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
             <Link
@@ -341,4 +298,4 @@ export default function HomePage() {
       <StoryModal item={selectedStory} onClose={() => setSelectedStory(null)} />
     </main>
   );
-}
+}

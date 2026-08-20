@@ -10,13 +10,13 @@ export const TestimonialsSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-studio-gold/10 border border-studio-gold/30 text-studio-gold text-[10px] uppercase tracking-widest font-semibold">
             <Star className="w-3 h-3 fill-current" />
-            <span>4.4★ Rated on Google (86 Reviews)</span>
+            <span>4.9★ Rated on Google (120+ Reviews)</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
-            Kind Words From Our Couples
+            Kind Words From Our Clients
           </h2>
           <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-            Real experiences shared by couples who trusted CLIQ Photography with their special day.
+            Real experiences shared by clients who trusted Photophactory Studios with their weddings, events, and commercial projects.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ export default function ServicesPage() {
         <span className="text-xs uppercase tracking-widest text-studio-gold">What Can You Hire Us For</span>
         <h1 className="font-serif text-4xl sm:text-6xl font-normal">Services & Offerings</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          We combine discreet candid photojournalism with cinematic wedding films. Every package is tailored to match the scale, location, and personality of your celebration.
+          We specialize in Weddings, Pre-Weddings, Cultural & Corporate Events, Commercial Photography, and Video Production Services. Every package is tailored to match the scale, location, and vision of your shoot or event.
         </p>
       </div>
 

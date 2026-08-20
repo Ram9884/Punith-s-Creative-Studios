@@ -22,7 +22,7 @@ export const ExitIntentPopup = () => {
   }, [hasTriggered]);
 
   const whatsappUrl = `https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${encodeURIComponent(
-    "Hi CLIQ Photography, I'd like to check if my wedding date is available."
+    "Hi Photophactory Studios, I'd like to check date availability for my shoot/event."
   )}`;
 
   return (
@@ -55,9 +55,9 @@ export const ExitIntentPopup = () => {
 
             <div className="space-y-2">
               <span className="text-[10px] uppercase tracking-widest text-studio-gold font-medium">Before You Go</span>
-              <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Checking Dates for Your Special Day?</h3>
+              <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Checking Dates for Your Shoot or Event?</h3>
               <p className="text-xs text-studio-muted max-w-sm mx-auto font-light leading-relaxed">
-                Peak wedding dates book quickly. Drop CLIQ Photography a quick WhatsApp with your event date to check date availability instantly.
+                Peak dates fill quickly across weddings, events, and commercial shoots. Drop Photophactory Studios a quick WhatsApp message to check date availability instantly.
               </p>
             </div>
 

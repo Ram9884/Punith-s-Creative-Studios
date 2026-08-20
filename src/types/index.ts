@@ -5,11 +5,12 @@ export type PortfolioCategory =
   | "Post-Weddings"
   | "Couples"
   | "Bridal"
-  | "Events";
+  | "Events"
+  | "Commercial";
 
 export interface PortfolioItem {
   id: number;
-  category: "Weddings" | "Pre-Weddings" | "Post-Weddings" | "Couples" | "Bridal" | "Events";
+  category: "Weddings" | "Pre-Weddings" | "Post-Weddings" | "Couples" | "Bridal" | "Events" | "Commercial";
   title: string;
   location: string;
   image: string;

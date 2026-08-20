@@ -2,13 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 244, 241, 234;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 10, 10, 10;
+/* Base Default Theme Variables */
+:root,
+html.dark {
+  --studio-bg-rgb: 10 10 10;          /* #0A0A0A */
+  --studio-card-rgb: 20 20 20;        /* #141414 */
+  --studio-border-rgb: 36 36 36;      /* #242424 */
+  --studio-ivory-rgb: 244 241 234;    /* #F4F1EA */
+  --studio-muted-rgb: 156 163 175;    /* #9CA3AF */
+  --studio-gold-rgb: 212 175 55;      /* #D4AF37 */
+  --studio-crimson-rgb: 139 30 45;    /* #8B1E2D */
+  color-scheme: dark;
+}
+
+/* Light Theme Variables */
+html.light {
+  --studio-bg-rgb: 250 248 245;       /* #FAF8F5 Warm fine-art gallery paper */
+  --studio-card-rgb: 255 255 255;     /* #FFFFFF Pure white cards */
+  --studio-border-rgb: 226 219 208;   /* #E2DBD0 Soft warm divider */
+  --studio-ivory-rgb: 28 25 23;       /* #1C1917 Deep rich charcoal text */
+  --studio-muted-rgb: 120 113 108;   /* #78716C Warm grey secondary text */
+  --studio-gold-rgb: 184 134 11;     /* #B8860B Warm bronze gold */
+  --studio-crimson-rgb: 139 30 45;    /* #8B1E2D Burgundy accent */
+  color-scheme: light;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  color: rgb(var(--studio-ivory-rgb));
+  background-color: rgb(var(--studio-bg-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
