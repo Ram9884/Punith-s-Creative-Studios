@@ -24,23 +24,23 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipientEmail = process.env.NEXT_PUBLIC_RECIPIENT_EMAIL || "photophactorystudios.in@gmail.com";
+    const recipientEmail = process.env.NEXT_PUBLIC_RECIPIENT_EMAIL || "sachin988451@gmail.com";
     const accessKey = process.env.WEB3FORMS_ACCESS_KEY || process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
     const emailSubject =
       source === "consultation_modal"
-        ? `[Photophactory Studios] New Consultation Booking: ${name}`
-        : `[Photophactory Studios] New Inquiry: ${name}`;
+        ? `[chennaifemale_photographer] New Consultation Booking: ${name}`
+        : `[chennaifemale_photographer] New Shoot Inquiry: ${name}`;
 
     // Format detailed message body
     const messageLines = [
-      `📸 NEW CLIENT INQUIRY - PHOTOPHACTORY STUDIOS`,
+      `📸 NEW CLIENT INQUIRY - CHENNAIFEMALE_PHOTOGRAPHER (Madhumitha K)`,
       `----------------------------------------`,
       `Client Name: ${name}`,
       `Phone / WhatsApp: ${phone}`,
     ];
 
-    if (weddingDate) messageLines.push(`Event / Target Date: ${weddingDate}`);
+    if (weddingDate) messageLines.push(`Event / Shoot Date: ${weddingDate}`);
     if (category) messageLines.push(`Service Category: ${category}`);
     if (venue) messageLines.push(`Venue & City: ${venue}`);
     if (selectedTopic) messageLines.push(`Consultation Topic: ${selectedTopic}`);
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     if (message) messageLines.push(`\nClient Message / Vision:\n${message}`);
 
     messageLines.push(`----------------------------------------`);
-    messageLines.push(`Submitted via website: Photophactory Studios (${source})`);
+    messageLines.push(`Submitted via website: chennaifemale_photographer (${source})`);
 
     const fullMessage = messageLines.join("\n");
 
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           access_key: accessKey,
           subject: emailSubject,
-          from_name: "Photophactory Studios Website",
+          from_name: "chennaifemale_photographer Website",
           name: name,
           phone: phone,
           email_to: recipientEmail,

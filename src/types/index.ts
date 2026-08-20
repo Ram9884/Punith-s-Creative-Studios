@@ -1,16 +1,16 @@
 export type PortfolioCategory =
   | "All"
   | "Weddings"
+  | "Maternity"
+  | "Babyshower"
+  | "Kids"
   | "Pre-Weddings"
   | "Post-Weddings"
-  | "Couples"
-  | "Bridal"
-  | "Events"
-  | "Commercial";
+  | "Events";
 
 export interface PortfolioItem {
   id: number;
-  category: "Weddings" | "Pre-Weddings" | "Post-Weddings" | "Couples" | "Bridal" | "Events" | "Commercial";
+  category: PortfolioCategory;
   title: string;
   location: string;
   image: string;

@@ -20,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Photophactory Studios | Weddings, Events & Commercial Production | Surat",
+  title: "chennaifemale_photographer | Madhumitha K | Freeze your best moments",
   description:
-    "Photophactory Studios specializes in Weddings, Pre-Weddings, Cultural & Corporate Events, Commercial Photography, and Video Production Services in Vesu, Surat.",
+    "Official website of chennaifemale_photographer by Madhumitha K. Wedding, Babyshower, Kids, and Maternity photography & videography in Chennai and open to travel worldwide. ஸ்ரீ ✨",
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",

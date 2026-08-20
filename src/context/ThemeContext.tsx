@@ -19,7 +19,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.classList.add("dark");
     root.classList.remove("light");
     try {
-      localStorage.setItem("photophactory-theme", "dark");
+      localStorage.setItem("cliq-theme", "dark");
     } catch (e) {}
   }, []);
 

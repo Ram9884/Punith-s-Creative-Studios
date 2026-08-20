@@ -6,7 +6,7 @@ import { BRAND_INFO } from "@/data/content";
 
 export const FloatingWhatsApp = () => {
   const whatsappUrl = `https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${encodeURIComponent(
-    "Hello Photophactory Studios, I'm inquiring about your dates and availability for my shoot/event."
+    "Hello Madhumitha K (chennaifemale_photographer), I'm inquiring about availability for my upcoming shoot."
   )}`;
 
   return (

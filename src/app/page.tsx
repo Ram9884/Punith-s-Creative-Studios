@@ -146,12 +146,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. ABOUT SECTION */}
+      {/* 4. ABOUT SECTION ("Freeze Your Best Moments") */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 border-b border-studio-border/60 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs uppercase tracking-widest text-studio-gold font-medium block">
-              About Photophactory Studios
+              About Madhumitha K
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory leading-tight">
               {BRAND_INFO.about.heading}
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="lg:col-span-6 relative h-96 sm:h-[450px] rounded-3xl overflow-hidden border border-studio-border shadow-2xl">
             <Image
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"
-              alt="Photophactory Studios About Moment"
+              alt="chennaifemale_photographer About Moment"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -181,10 +181,10 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-studio-card/90 backdrop-blur-md border border-studio-border">
               <p className="font-serif text-lg text-studio-ivory italic">
-                "{BRAND_INFO.heroTagline}"
+                "Freeze your best moments 📸"
               </p>
               <p className="text-[10px] uppercase tracking-widest text-studio-gold mt-1 font-medium">
-                Vesu, Surat • Available Worldwide
+                Chennai • Open to Travel ✈️🌍
               </p>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">Services & Craft</h2>
           <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-            Tailored photography and cinematic videography packages designed to preserve every dimension of your celebration or commercial project.
+            Tailored photography and cinematic videography packages designed to preserve every dimension of your celebration.
           </p>
         </div>
 
@@ -275,13 +275,13 @@ export default function HomePage() {
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 text-center relative z-10">
         <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-studio-card to-studio-bg border border-studio-gold/40 space-y-6 max-w-4xl mx-auto shadow-2xl">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
-            Reserve Your Dates
+            Reserve Your Event Date
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
-            Ready to Tell Your Story with Photophactory Studios?
+            Ready to Freeze Your Best Moments?
           </h2>
           <p className="text-xs sm:text-sm text-studio-muted max-w-lg mx-auto font-light leading-relaxed">
-            We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every client.
+            We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
             <Link

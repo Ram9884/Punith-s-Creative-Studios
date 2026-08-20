@@ -22,16 +22,16 @@ export function Navbar() {
       <header className="sticky top-0 z-50 border-b border-studio-border/80 bg-studio-bg/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3" aria-label="Photophactory Studios home">
+          <Link href="/" className="flex items-center gap-3" aria-label="chennaifemale_photographer home">
             <div className="flex h-10 w-10 items-center justify-center rounded-full border border-studio-gold/60 bg-studio-card text-studio-gold shadow-lg shadow-studio-gold/15">
               <Camera className="w-5 h-5" />
             </div>
             <div className="leading-none">
-              <div className="font-serif text-xl sm:text-2xl tracking-[0.04em] text-studio-ivory font-medium">
-                Photophactory <span className="text-studio-gold font-light">Studios</span>
+              <div className="font-serif text-lg sm:text-xl tracking-[0.04em] text-studio-ivory font-medium">
+                chennaifemale<span className="text-studio-gold font-light">_photographer</span>
               </div>
-              <div className="mt-1 text-[9px] uppercase tracking-[0.20em] text-studio-muted">
-                {BRAND_INFO.positioning}
+              <div className="mt-1 text-[9px] uppercase tracking-[0.18em] text-studio-gold font-medium">
+                Madhumitha K • {BRAND_INFO.positioning}
               </div>
             </div>
           </Link>

@@ -23,12 +23,12 @@ function PortfolioContent() {
   const categories: PortfolioCategory[] = [
     "All",
     "Weddings",
+    "Maternity",
+    "Babyshower",
+    "Kids",
     "Pre-Weddings",
     "Post-Weddings",
     "Events",
-    "Commercial",
-    "Couples",
-    "Bridal",
   ];
 
   const filteredItems =

@@ -6,134 +6,125 @@ import {
 } from "@/types";
 
 export const BRAND_INFO = {
-  name: "Photophactory Studios",
-  heroTagline: "Crafting Timeless Celebrations With An Editorial Touch",
+  name: "chennaifemale_photographer",
+  handle: "@chennaifemale_photographer",
+  photographerName: "Madhumitha K",
+  heroTagline: "Freeze your best moments 📸",
   heroDescription:
-    "We specialize in Weddings, Pre-Weddings, Cultural & Corporate Events, as well as Commercial Photography and Video Production Services.",
-  positioning: "PPS | Luxury Wedding Photography | India",
+    "Bespoke Wedding, Babyshower, Kids, and Maternity photography & videography by Madhumitha K. Based in Chennai, available to travel worldwide. ஸ்ரீ ✨",
+  positioning: "Photography & Videography | ஸ்ரீ ✨",
   heroCTA: {
     primary: "Book Your Shoot",
-    secondary: "Explore Our Stories",
+    secondary: "Explore Our Work",
   },
   about: {
-    heading: "Your Story. Photophactory Studios.",
+    heading: "Freeze Your Best Moments",
     description:
-      "Crafting timeless celebrations with an editorial touch. We specialize in Weddings, Pre-Weddings, Cultural & Corporate Events, as well as Commercial Photography and Video Production Services across Surat, India, and global destinations.",
+      "Welcome to chennaifemale_photographer by Madhumitha K. We specialize in capturing life's most precious milestones — from grand Weddings and intimate Maternity sessions to joyful Babyshower and Kids photography. Every frame is crafted with heart, preserving authentic smiles and timeless emotions. Based in Chennai and open to travel worldwide. ஸ்ரீ ✨",
   },
   contact: {
-    location: "Vesu, Surat, Gujarat",
-    address:
-      "1st-44, 2 Floor, Atlanta Business Hub, Opp Ofira Posh Residence, Vesu, Surat",
-    email: "photophactorystudios.in@gmail.com",
-    phone: "+91 98403 18800",
-    phoneRaw: "9840318800",
-    whatsappNumber: "919840318800",
-    instagram: "@photo_phactory_studios",
-    instagramUrl: "https://instagram.com/photo_phactory_studios",
-    instagramTitle: "PPS | Luxury Wedding Photography | India",
-    instagramCategory: "Photography and videography",
-    instagramBio: "Crafting timeless celebrations with an editorial touch ✨",
-    instagramPosts: "446",
-    instagramFollowers: "4,290",
-    instagramFollowing: "905",
+    location: "Chennai • Open to Travel ✈️🌍",
+    address: "Chennai, Tamil Nadu, India (Open to Travel Worldwide ✈️🌍)",
+    phone: "+91 73973 31508",
+    phoneRaw: "7397331508",
+    whatsappNumber: "917397331508",
+    instagram: "@chennaifemale_photographer",
+    instagramUrl: "https://instagram.com/chennaifemale_photographer",
+    youtubeUrl: "https://www.youtube.com/watch?v=wQjK71E5IXs&t=33s",
+    youtubeShortUrl: "https://youtu.be/3x2V7l_kdNM",
+    googleMapsUrl: "https://maps.app.goo.gl/dH1hQE42BtYJTpCw9?g_st=iw",
   },
   footer: {
-    brandName: "Photophactory Studios",
-    tagline: "PPS | Luxury Wedding Photography | India",
+    brandName: "chennaifemale_photographer",
+    photographer: "Madhumitha K",
+    tagline: "Freeze your best moments 📸 • ஸ்ரீ ✨",
     subtext:
-      "Crafting timeless celebrations with an editorial touch ✨ • Weddings | Pre-Weddings | Cultural & Corporate Events | Commercial Photography & Video Production Services",
+      "Madhumitha K | Wedding, Babyshower, Kids & Maternity Photography & Videography | Open to Travel Worldwide ✈️🌍",
   },
 };
 
 export const STATS = [
-  { value: "4,290+", label: "Instagram Followers" },
-  { value: "446+", label: "Posts & Stories" },
-  { value: "4.9★", label: "Google Rating" },
-  { value: "120+", label: "Client Reviews" },
+  { value: "38.4K+", label: "Instagram Followers" },
+  { value: "953", label: "Posts Shared" },
+  { value: "1,578", label: "Following" },
+  { value: "5.0★", label: "Google Rating" },
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
     category: "Weddings",
-    title: "Ananya & Siddharth",
-    location: "Vesu & Dumas Heritage, Surat",
+    title: "Ananya & Siddharth — Wedding Story",
+    location: "Chennai Heritage Mandap",
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
     description:
-      "A rich traditional wedding framed with heritage silk nuances, candid laughter, and authentic ritual warmth in Surat.",
+      "A rich South Indian wedding framed with traditional silk nuances, candid family laughter, and emotional rituals.",
     quote:
-      "Looking through our wedding photos felt like reliving every candid emotion of the day.",
+      "Madhumitha captured every tiny ritual and candid tear so beautifully. We relived the entire day watching our photos!",
     couple: "Ananya & Siddharth",
   },
   {
     id: 2,
-    category: "Pre-Weddings",
-    title: "Ritika & Rohan",
-    location: "Riverfront & Coastal Shores, Gujarat",
+    category: "Maternity",
+    title: "Serene Motherhood — Kavya's Maternity Session",
+    location: "Mahabalipuram Coastal Sunrise",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Golden hour romance captured against scenic landscapes and quiet waters along the Gujarat coast.",
-    quote: "They made us feel completely relaxed and natural in front of the lens.",
-    couple: "Ritika & Rohan",
-  },
-  {
-    id: 3,
-    category: "Post-Weddings",
-    title: "Sanjana & Vikram",
-    location: "Atlanta Business Hub & Studio, Surat",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "Post-wedding cinematic couple portraits captured amidst modern aesthetic architecture and soft lighting.",
-    quote: "The frames captured our quiet moments in the most magical, timeless way.",
-    couple: "Sanjana & Vikram",
-  },
-  {
-    id: 4,
-    category: "Bridal",
-    title: "Kavya's Royal Bridal Elegance",
-    location: "Vesu Luxury Estate, Surat",
-    image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "Editorial bridal portraiture emphasizing fine jewelry details, traditional drape, and serene poise.",
-    quote: "Every detail of my bridal look was documented with such artistic grace.",
+      "Soft golden hour lighting emphasizing the beauty and anticipation of new motherhood by the ocean breeze.",
+    quote:
+      "Madhumitha made me feel so comfortable and radiant during my maternity shoot. The photos are pure art.",
     couple: "Kavya S.",
   },
   {
-    id: 5,
-    category: "Couples",
-    title: "Nikhil & Divya",
-    location: "Dumas Promenade, Surat",
+    id: 3,
+    category: "Babyshower",
+    title: "Joyous Seemantham — Divine Blessings",
+    location: "Chennai Traditional Residence",
     image:
-      "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Sunset couple session filled with organic smiles, wind-blown hair, and relaxed togetherness.",
-    couple: "Nikhil & Divya",
+      "Vibrant traditional babyshower celebrations filled with jasmine garlands, glass bangles, and grandmotherly blessings.",
+    quote:
+      "Every smile and ritual detail was recorded with such heartwarming elegance.",
+    couple: "Deepika & Ashwin",
+  },
+  {
+    id: 4,
+    category: "Kids",
+    title: "First Milestone — Aarav's 1st Birthday",
+    location: "ECR Lawn Venue, Chennai",
+    image:
+      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Unscripted childhood wonder, cake smash laughs, and playful family moments captured in natural light.",
+    quote:
+      "She has a magical way with kids! Aarav was laughing throughout the shoot.",
+    couple: "Priya & Rajesh (Parents)",
+  },
+  {
+    id: 5,
+    category: "Pre-Weddings",
+    title: "Ritika & Rohan — Romantic Promenade",
+    location: "Pondicherry Heritage French Quarter",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Cinematic couple portraits framed amidst pastel colonial lanes and quiet seaside atmosphere.",
+    quote: "Working with Madhumitha was completely relaxed and effortless.",
+    couple: "Ritika & Rohan",
   },
   {
     id: 6,
     category: "Events",
-    title: "Corporate & Cultural Gala Night",
-    location: "Grand Convention Center, Surat",
+    title: "Sangeet Night & Gala Reception",
+    location: "ITC Grand Chola, Chennai",
     image:
       "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
     description:
-      "High-energy cultural performances and glamorous corporate gala evening documentation with professional precision.",
-    couple: "Corporate Cultural Night",
-  },
-  {
-    id: 7,
-    category: "Commercial",
-    title: "Luxury Brand Commercial Campaign",
-    location: "Photophactory Studios, Surat",
-    image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "High-end commercial product and brand identity photography with studio lighting and high dynamic range output.",
-    couple: "Commercial Shoot",
+      "High-energy dance performances and colorful family celebration moments documented with crisp clarity.",
+    couple: "Nandini & Karan",
   },
 ];
 
@@ -141,120 +132,105 @@ export const WEDDING_FILMS = [
   {
     id: "film-1",
     title: "Eternal Vows — Ananya & Siddharth",
-    location: "Surat Grand Heritage Mandap",
+    location: "Chennai Heritage Mandap",
     duration: "3:45 Film",
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     description:
-      "A cinematic motion film scored with soul-stirring music and emotional vows.",
+      "A cinematic motion film scored with emotional vows and classical strings by Madhumitha K.",
   },
   {
     id: "film-2",
-    title: "Sunset Promises — Sneha & Vivek",
-    location: "Vesu Beachfront Resort, Surat",
+    title: "Babyshower & Blessing Story",
+    location: "ECR Beachfront Venue, Chennai",
     duration: "2:30 Reel",
     image:
       "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
     description:
-      "Vibrant wedding teaser highlighting joyous sangeet dance movements and golden hour rituals.",
+      "Vibrant Seemantham highlight reel capturing flower showers, happy smiles, and family warmth.",
   },
 ];
 
 export const SERVICES: ServiceItem[] = [
   {
     id: "wedding-photography",
-    title: "Wedding Photography 📸",
-    tagline: "Comprehensive documentary & editorial wedding photo coverage.",
+    title: "Wedding Photography & Videography 📸🎬",
+    tagline: "Documentary & editorial wedding coverage.",
     description:
-      "Full-day coverage capturing mandap rituals, unscripted emotions, family interactions, and high-resolution heirloom portraits.",
+      "Comprehensive coverage capturing authentic mandap rituals, unscripted emotions, family warmth, and high-resolution heirloom portraits.",
     deliverables: [
       "High-resolution color-graded photo gallery",
-      "Online private proofing portal",
+      "Cinematic Teaser & Full Wedding Film (4K)",
       "Fine-art handcrafted album curation",
     ],
     categoryFilter: "Weddings",
   },
   {
-    id: "wedding-videography",
-    title: "Video Production & Films 🎬",
-    tagline: "Cinematic films, teasers, ad films & full ceremony recordings.",
+    id: "maternity-photography",
+    title: "Maternity Photography 🤰✨",
+    tagline: "Dreamy, elegant pregnancy portrait sessions.",
     description:
-      "Cinematic motion pictures scored with custom sound design and narrative pacing for weddings, events, and brand films.",
+      "Celebrate the magic of new life with soft, aesthetic maternity portraiture tailored to make every expectant mother feel graceful and celebrated.",
     deliverables: [
-      "3-5 minute Cinematic Teaser",
-      "Full Feature Documentary Film",
-      "Social Media Vertical Reels (4K)",
+      "Studio & scenic outdoor location setup",
+      "Gown & styling guidance",
+      "High-resolution retouched gallery pack",
     ],
-    categoryFilter: "Weddings",
+    categoryFilter: "Maternity",
+  },
+  {
+    id: "babyshower-photography",
+    title: "Babyshower / Seemantham Coverage 🍼💛",
+    tagline: "Traditional ritual & festive family celebration.",
+    description:
+      "Documenting bangles, floral rituals, elder blessings, and joyous family dining during your traditional babyshower ceremonies.",
+    deliverables: [
+      "Full event candid & group coverage",
+      "Highlight video reel for social media",
+      "Fast preview gallery turnaround",
+    ],
+    categoryFilter: "Babyshower",
+  },
+  {
+    id: "kids-photography",
+    title: "Kids & Baby Portraiture 👶🎉",
+    tagline: "First birthdays, cake smashes & milestone memories.",
+    description:
+      "Patient, fun-filled photo sessions capturing your baby's innocent smiles, playful giggles, and milestone celebrations in a comfortable environment.",
+    deliverables: [
+      "Unrushed child-friendly shoot pace",
+      "Creative theme setups & props guidance",
+      "Digital high-res print files",
+    ],
+    categoryFilter: "Kids",
   },
   {
     id: "pre-wedding",
-    title: "Pre-Wedding Photography ❤️",
-    tagline: "Romantic couple sessions, beach shoots & destination stories.",
+    title: "Pre-Wedding & Couple Sessions ❤️",
+    tagline: "Romantic couple stories & destination shoots.",
     description:
-      "Relaxed guided photo and film sessions at scenic coastal, heritage, or city locations before your big day.",
+      "Relaxed guided photo and reel sessions at scenic beach resorts, heritage streets, or outdoor spots before your big day.",
     deliverables: [
-      "Location guidance & concept planning",
+      "Concept & location planning",
       "Multiple outfit & mood setups",
-      "Save-the-date teaser graphics & photos",
+      "Save-the-date graphics & reel pack",
     ],
     categoryFilter: "Pre-Weddings",
   },
   {
-    id: "cultural-corporate-events",
-    title: "Cultural & Corporate Events 🎉",
-    tagline: "Sangeet, Haldi, Galas, Corporate Conferences & Concerts.",
+    id: "event-photography",
+    title: "Events & Milestone Celebrations 🎉",
+    tagline: "Sangeet, Haldi, Engagements & Receptions.",
     description:
-      "Vibrant coverage of cultural celebrations, corporate conventions, high-energy stage performances, and award nights.",
+      "High-energy coverage of family functions, engagement ring ceremonies, sangeet performances, and milestone gatherings.",
     deliverables: [
       "Guest & decor documentation",
-      "Stage & keynote high-action frames",
-      "High-speed digital delivery pack",
+      "High-speed digital delivery",
+      "Print-ready full resolution files",
     ],
     categoryFilter: "Events",
-  },
-  {
-    id: "commercial-photography",
-    title: "Commercial Photography 💼",
-    tagline: "Product shoots, brand campaigns & commercial portfolios.",
-    description:
-      "Studio and location commercial photography for brands, products, fashion lines, and corporate profiles.",
-    deliverables: [
-      "Studio lighting & high-res RAW editing",
-      "Commercial license & retouched assets",
-      "E-commerce & print-ready formats",
-    ],
-    categoryFilter: "Commercial",
-  },
-  {
-    id: "candid-photography",
-    title: "Candid Photography 💍",
-    tagline: "Authentic, unposed micro-moments of joy and emotion.",
-    description:
-      "Discreet photojournalism focusing on genuine smiles, heartfelt tears, stolen glances, and unscripted celebration moments.",
-    deliverables: [
-      "Dedicated candid lead photographer",
-      "Unobtrusive documentary style",
-      "Fast preview turnaround pack",
-    ],
-    categoryFilter: "Weddings",
-  },
-  {
-    id: "post-wedding",
-    title: "Post-Wedding Photography ✨",
-    tagline: "Quiet intimate portraits & creative post-ceremony sessions.",
-    description:
-      "Stress-free portraiture after the hectic wedding rituals, giving you space to express your love in dreamy settings.",
-    deliverables: [
-      "Unrushed post-ceremony shoot pacing",
-      "Artistic lighting & aesthetic color grade",
-      "Keepsake canvas prints",
-    ],
-    categoryFilter: "Post-Weddings",
   },
 ];
 
@@ -264,28 +240,28 @@ export const EXPERIENCE_STEPS: ExperienceStep[] = [
     title: "Say Hello",
     subtitle: "Inquire & Date Check",
     description:
-      "Tell us about your dates, venue, and project scope (Weddings, Events, or Commercial). We verify availability and schedule a call.",
+      "Contact Madhumitha via WhatsApp or our booking portal with your dates and event location.",
   },
   {
     step: "02",
     title: "Let's Plan",
-    subtitle: "Vision & Flow",
+    subtitle: "Vision & Concept",
     description:
-      "We understand your schedule, ritual timings, or campaign concept to create a smooth shooting plan.",
+      "We discuss your shoot style, outfit choices, ritual timings, and preferred aesthetics.",
   },
   {
     step: "03",
     title: "We Capture",
-    subtitle: "Candid & Cinematic",
+    subtitle: "Freeze The Moment",
     description:
-      "You focus on enjoying your event or shoot while our team captures authentic emotions and stunning visual frames.",
+      "Relax and enjoy your event while Madhumitha captures genuine smiles and organic emotions.",
   },
   {
     step: "04",
     title: "Relive It",
-    subtitle: "Films & Master Assets",
+    subtitle: "Heirloom Galleries & Reels",
     description:
-      "Receive color-graded photo galleries, commercial assets, and cinematic films that deliver sheer visual excellence.",
+      "Receive your beautifully color-graded photo galleries, reels, and custom albums.",
   },
 ];
 
@@ -293,10 +269,10 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
     quote:
-      "Photophactory Studios captured our wedding so beautifully! The candid shots and the wedding film made our entire family relive every emotion. Highly recommended in Surat!",
+      "Madhumitha captured our wedding and seemantham so effortlessly! Her patience and eye for candid moments made our photos look like a dream. 5.0 stars well deserved!",
     author: "Deepika & Ashwin",
-    event: "Traditional Surat Wedding",
-    location: "Vesu, Surat",
+    event: "Wedding & Babyshower",
+    location: "Chennai",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop",
@@ -304,10 +280,10 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 2,
     quote:
-      "The pre-wedding shoot and our corporate product shoot were handled with pure professionalism. They made us feel relaxed and delivered stunning quality.",
-    author: "Ritika & Rohan",
-    event: "Pre-Wedding & Commercial Session",
-    location: "Surat",
+      "Our maternity shoot in Mahabalipuram was so comfortable and memorable. Madhumitha guided us gently through poses and captured pure magic.",
+    author: "Kavya & Vikram",
+    event: "Maternity Session",
+    location: "Mahabalipuram",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop",
@@ -315,10 +291,10 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 3,
     quote:
-      "From the initial consultation call at Atlanta Business Hub to the final fine-art album and commercial reel, Photophactory Studios delivered sheer perfection.",
-    author: "Meera & Karthik",
-    event: "Grand Reception & Corporate Gala",
-    location: "Surat, Gujarat",
+      "From my baby's 1st birthday shoot to our family function, chennaifemale_photographer is our go-to choice. Highly recommended!",
+    author: "Priya & Rajesh",
+    event: "Kids & Family Shoot",
+    location: "Chennai",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
@@ -366,52 +342,39 @@ export const SOCIAL_MOMENTS = [
 
 export const CALCULATOR_SERVICES = [
   {
-    id: "candid_photo",
-    name: "Candid Wedding Photography (Lead + Assistant)",
-    price: 60000,
-    category: "Photo",
+    id: "wedding_coverage",
+    name: "Full Wedding Photography & Cinematic Film",
+    price: 65000,
+    category: "Wedding",
   },
   {
-    id: "traditional_photo",
-    name: "Traditional Photography & Family Coverage",
-    price: 35000,
-    category: "Photo",
+    id: "maternity_shoot",
+    name: "Maternity Photography Session (Indoor/Outdoor)",
+    price: 25000,
+    category: "Maternity",
   },
   {
-    id: "cinematic_film",
-    name: "Cinematic Wedding Film & Teaser (4K)",
-    price: 70000,
-    category: "Film",
+    id: "babyshower_event",
+    name: "Babyshower / Seemantham Event Coverage",
+    price: 30000,
+    category: "Babyshower",
   },
   {
-    id: "pre_wedding",
-    name: "Pre-Wedding / Post-Wedding Shoot (1 Day)",
-    price: 40000,
-    category: "Shoot",
-  },
-  {
-    id: "corporate_cultural_event",
-    name: "Cultural & Corporate Event Coverage (1 Day)",
-    price: 45000,
-    category: "Events",
-  },
-  {
-    id: "commercial_shoot",
-    name: "Commercial Photography & Video Production Package",
-    price: 55000,
-    category: "Commercial",
+    id: "kids_birthday",
+    name: "Kids Birthday & Baby Milestone Shoot",
+    price: 20000,
+    category: "Kids",
   },
   {
     id: "reels_pack",
-    name: "Vertical Social Reels Fast-Delivery Pack (5 Reels)",
-    price: 25000,
+    name: "Vertical Instagram Reels Fast-Delivery Pack (3 Reels)",
+    price: 15000,
     category: "Addon",
   },
   {
     id: "luxury_album",
-    name: "Handcrafted Fine-Art Leather Album",
-    price: 20000,
+    name: "Handcrafted Fine-Art Canvera/Leather Album",
+    price: 18000,
     category: "Addon",
   },
 ];
-

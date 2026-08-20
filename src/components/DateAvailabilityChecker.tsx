@@ -5,11 +5,11 @@ import { Calendar, MapPin, CheckCircle2, Sparkles, MessageCircle, ArrowRight } f
 import { BRAND_INFO } from "@/data/content";
 
 const CITIES = [
-  "Surat",
-  "Vesu",
-  "Ahmedabad",
-  "Vadodara",
-  "Rajkot",
+  "Chennai",
+  "Chetpet",
+  "Mahabalipuram",
+  "Pondicherry",
+  "Bangalore",
   "Goa",
   "Udaipur",
   "International Destination",
@@ -25,7 +25,7 @@ const MONTHS = [
 ];
 
 export const DateAvailabilityChecker = () => {
-  const [selectedCity, setSelectedCity] = useState("Surat");
+  const [selectedCity, setSelectedCity] = useState("Chennai");
   const [selectedMonth, setSelectedMonth] = useState("November 2026");
   const [isChecked, setIsChecked] = useState(false);
 
@@ -35,7 +35,7 @@ export const DateAvailabilityChecker = () => {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Photophactory Studios, I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if your team is open for bookings on my date!`
+    `Hello Madhumitha K (chennaifemale_photographer), I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if you are open for bookings on my date!`
   );
 
   return (
@@ -55,7 +55,7 @@ export const DateAvailabilityChecker = () => {
               Check Your Event Date & Venue Availability
             </h2>
             <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-              To ensure bespoke creative focus for every client, Photophactory Studios accepts a limited number of commissions per season across Surat, Gujarat, and destination venues.
+              To ensure dedicated artistic focus for every client, chennaifemale_photographer accepts a limited number of commissions per season across Tamil Nadu and destination venues.
             </p>
             <div className="pt-2 flex items-center gap-4 text-xs text-studio-gold/90">
               <div className="flex items-center gap-1.5">

@@ -62,16 +62,16 @@ export default function InquirePage() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Photophactory Studios, I'm inquiring about date availability for ${weddingDate || "my event"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
+    `Hello Madhumitha K (chennaifemale_photographer), I'm inquiring about date availability for ${weddingDate || "my event"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
   );
 
   return (
     <main className="max-w-7xl mx-auto px-6 pt-10 sm:pt-14 pb-16">
       <div className="max-w-3xl space-y-4 mb-12">
         <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">Start The Conversation</span>
-        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Your Story. Photophactory Studios.</h1>
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Freeze Your Best Moments</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          Tell us about your celebration, event, or commercial project. Photophactory Studios accepts a limited number of commissions each season to ensure uncompromising artistic dedication for every client.
+          Tell us about your celebration. chennaifemale_photographer by Madhumitha K accepts a limited number of commissions each season to ensure uncompromising artistic dedication for every client.
         </p>
       </div>
 
@@ -82,19 +82,6 @@ export default function InquirePage() {
             <h3 className="font-serif text-xl text-studio-ivory font-medium">Direct Inquiries</h3>
 
             <div className="space-y-4 text-xs">
-              <a
-                href={`mailto:${BRAND_INFO.contact.email}`}
-                className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
-              >
-                <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
-                  <Send className="w-4 h-4" />
-                </div>
-                <div>
-                  <p className="text-studio-ivory font-medium">Email Direct</p>
-                  <p className="text-studio-gold font-medium">{BRAND_INFO.contact.email}</p>
-                </div>
-              </a>
-
               <a
                 href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
                 target="_blank"
@@ -138,7 +125,7 @@ export default function InquirePage() {
           <div className="p-6 rounded-2xl border border-studio-border/60 bg-studio-card/30 text-xs text-studio-muted space-y-2">
             <p className="font-semibold text-studio-ivory uppercase tracking-wider">Peak Season Notice</p>
             <p className="font-light leading-relaxed">
-              Dates fill quickly across wedding and commercial seasons. We recommend reserving dates 2 to 6 months in advance.
+              Wedding season dates between October and March fill quickly. We recommend reserving dates 4 to 8 months in advance.
             </p>
           </div>
         </div>
@@ -152,7 +139,7 @@ export default function InquirePage() {
               </div>
               <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
               <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed font-light">
-                Thank you for reaching out. An email notification has been dispatched to our team ({BRAND_INFO.contact.email}). We will review date availability and get back to you via WhatsApp or call within 24 hours.
+                Thank you for reaching out. An email notification has been dispatched to our team (sachin988451@gmail.com). We will review date availability and get back to you via WhatsApp or call within 24 hours.
               </p>
               <div className="pt-4">
                 <a
@@ -188,7 +175,7 @@ export default function InquirePage() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+91 98403 18800"
+                    placeholder="+91 73973 31508"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
@@ -204,19 +191,18 @@ export default function InquirePage() {
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   >
                     <option value="Weddings">Weddings</option>
+                    <option value="Maternity">Maternity</option>
+                    <option value="Babyshower">Babyshower</option>
+                    <option value="Kids">Kids / Baby Milestone</option>
                     <option value="Pre-Weddings">Pre-Weddings</option>
-                    <option value="Post-Weddings">Post-Weddings</option>
-                    <option value="Events">Cultural & Corporate Events</option>
-                    <option value="Commercial">Commercial Photography & Video</option>
-                    <option value="Couples">Couples & Portraits</option>
-                    <option value="Bridal">Bridal</option>
+                    <option value="Events">Events</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-wider text-studio-muted font-medium flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-studio-gold" />
-                    <span>Target Date *</span>
+                    <span>Shoot / Event Date *</span>
                   </label>
                   <input
                     required
@@ -236,12 +222,12 @@ export default function InquirePage() {
               )}
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Venue & City</label>
+                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Venues & City</label>
                 <input
                   type="text"
                   value={venue}
                   onChange={(e) => setVenue(e.target.value)}
-                  placeholder="e.g. Vesu / Atlanta Business Hub, Surat"
+                  placeholder="e.g. Chennai / ECR Estate / Destination Venue"
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                 />
               </div>
