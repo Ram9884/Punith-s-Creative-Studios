@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BRAND_INFO } from "@/data/content";
-import { MapPin, Phone, Instagram, Youtube, ExternalLink } from "lucide-react";
+import { MapPin, Phone, MessageCircle, ExternalLink } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,10 +9,10 @@ export function Footer() {
         <div className="space-y-4">
           <div>
             <div className="font-serif text-2xl sm:text-3xl tracking-[0.04em] text-studio-ivory font-medium">
-              chennaifemale<span className="text-studio-gold font-light">_photographer</span>
+              Sri Balaji <span className="text-studio-gold font-light">Studios & Frames</span>
             </div>
             <p className="text-xs uppercase tracking-[0.18em] text-studio-gold font-medium mt-1">
-              Madhumitha K • {BRAND_INFO.heroTagline}
+              Photography • Videography • Printing • Scanning • Frames
             </p>
           </div>
           <p className="max-w-md text-xs leading-relaxed text-studio-muted font-light">
@@ -28,14 +28,17 @@ export function Footer() {
             <Link href="/" className="block hover:text-studio-gold transition-colors">
               Home
             </Link>
-            <Link href="/portfolio" className="block hover:text-studio-gold transition-colors">
-              Portfolio
+            <Link href="/#about" className="block hover:text-studio-gold transition-colors">
+              About Studio
             </Link>
             <Link href="/services" className="block hover:text-studio-gold transition-colors">
-              Services
+              Services & Framing
+            </Link>
+            <Link href="/portfolio" className="block hover:text-studio-gold transition-colors">
+              Portfolio Archive
             </Link>
             <Link href="/inquire" className="block hover:text-studio-gold transition-colors">
-              Book Your Shoot
+              Book a Session
             </Link>
           </div>
         </div>
@@ -67,25 +70,14 @@ export function Footer() {
               </a>
             </div>
             <div className="flex items-center gap-2.5">
-              <Instagram className="w-4 h-4 text-studio-gold flex-shrink-0" />
+              <MessageCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
               <a
-                href={BRAND_INFO.contact.instagramUrl}
+                href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-studio-gold transition-colors font-medium text-studio-gold"
+                className="hover:text-studio-gold transition-colors font-medium text-emerald-400"
               >
-                {BRAND_INFO.contact.instagram}
-              </a>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <Youtube className="w-4 h-4 text-red-500 flex-shrink-0" />
-              <a
-                href={BRAND_INFO.contact.youtubeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-studio-gold transition-colors font-medium text-studio-ivory"
-              >
-                Watch Films on YouTube
+                Chat on WhatsApp (+91 98844 79061)
               </a>
             </div>
           </div>
@@ -94,8 +86,8 @@ export function Footer() {
 
       <div className="border-t border-studio-border/80 bg-studio-bg/40">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-[10px] uppercase tracking-[0.22em] text-studio-muted sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} chennaifemale_photographer (Madhumitha K). All rights reserved.</span>
-          <span>{BRAND_INFO.heroTagline}</span>
+          <span>© {new Date().getFullYear()} Sri Balaji Studios & Frames. All rights reserved.</span>
+          <span>{BRAND_INFO.contact.location} • Est. 1991</span>
         </div>
       </div>
     </footer>

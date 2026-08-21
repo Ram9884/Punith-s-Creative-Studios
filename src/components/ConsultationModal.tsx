@@ -80,7 +80,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hello Madhumitha K (chennaifemale_photographer), I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
+    `Hello Sri Balaji Studios & Frames, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
   );
 
   const resetAndClose = () => {

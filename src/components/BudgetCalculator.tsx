@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { CALCULATOR_SERVICES } from "@/data/content";
-import { Check, MessageCircle, Calculator, Sparkles } from "lucide-react";
+import { CALCULATOR_SERVICES, BRAND_INFO } from "@/data/content";
+import { Check, MessageCircle, Calculator } from "lucide-react";
 
 export const BudgetCalculator = () => {
   const [selectedIds, setSelectedIds] = useState<string[]>([
-    "candid_photo",
-    "cinematic_film"
+    "wedding_coverage",
+    "candid_photography"
   ]);
 
   const toggleService = (id: string) => {
@@ -27,7 +27,7 @@ export const BudgetCalculator = () => {
     .join(", ");
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Studio One, I customized a package estimate on your website for ₹${totalEstimate.toLocaleString("en-IN")}. Services: ${selectedNames}. Are our wedding dates available?`
+    `Hello Sri Balaji Studios & Frames, I customized a package estimate on your website for ₹${totalEstimate.toLocaleString("en-IN")}. Services: ${selectedNames}. Please confirm availability for my preferred dates!`
   );
 
   return (
@@ -38,7 +38,7 @@ export const BudgetCalculator = () => {
             <Calculator className="w-3.5 h-3.5" />
             <span>Interactive Estimate Builder</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Customize Your Wedding Package</h3>
+          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Customize Your Photography & Framing Package</h3>
           <p className="text-xs text-studio-muted font-light mt-1">Select the services you need for transparent ballpark pricing.</p>
         </div>
 
@@ -84,10 +84,10 @@ export const BudgetCalculator = () => {
 
       <div className="pt-4 border-t border-studio-border flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs text-studio-muted max-w-md font-light">
-          * Travel and multi-city stay logistics are customized separately for destination weddings.
+          * Travel and multi-city stay logistics are customized separately for destination celebrations.
         </p>
         <a
-          href={`https://wa.me/918217521582?text=${whatsappMessage}`}
+          href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto px-6 py-3 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"

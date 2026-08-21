@@ -243,20 +243,26 @@ export function HeroReel() {
             </div>
 
             <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.08] tracking-tight text-[#f5f1ea] text-balance">
-              Every frame starts with a still moment.
+              Three Decades of Stories, Framed Forever.
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-[#f5f1ea]/80 font-light leading-relaxed max-w-2xl">
-              A photography studio built around one camera, one lens, and the light that shows up once.
+              {BRAND_INFO.heroDescription}
             </p>
 
-            <div className="pt-4 flex items-center gap-4">
+            <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
-                href="/inquire"
+                href="/portfolio"
                 className="px-8 py-3.5 rounded-full bg-[#d4a574] text-[#0a0a0a] font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2 shadow-xl shadow-[#d4a574]/20"
               >
-                <span>Book a session</span>
+                <span>Explore Our Work</span>
                 <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/inquire"
+                className="px-7 py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-[#f5f1ea] font-medium text-xs uppercase tracking-widest hover:bg-white/10 transition-all"
+              >
+                <span>Book a Session</span>
               </Link>
             </div>
           </div>

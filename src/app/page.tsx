@@ -149,9 +149,9 @@ export default function HomePage() {
       {/* 4. ABOUT SECTION ("Freeze Your Best Moments") */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 border-b border-studio-border/60 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6" id="about">
             <span className="text-xs uppercase tracking-widest text-studio-gold font-medium block">
-              About Madhumitha K
+              About Sri Balaji Studios & Frames
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory leading-tight">
               {BRAND_INFO.about.heading}
@@ -164,7 +164,7 @@ export default function HomePage() {
                 href="/inquire"
                 className="px-7 py-3 rounded-full bg-studio-gold text-studio-bg font-medium text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2 shadow-lg shadow-studio-gold/20"
               >
-                <span>Book Your Shoot</span>
+                <span>Book a Session</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="lg:col-span-6 relative h-96 sm:h-[450px] rounded-3xl overflow-hidden border border-studio-border shadow-2xl">
             <Image
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop"
-              alt="chennaifemale_photographer About Moment"
+              alt="Sri Balaji Studios & Frames About Moment"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -181,10 +181,10 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-studio-card/90 backdrop-blur-md border border-studio-border">
               <p className="font-serif text-lg text-studio-ivory italic">
-                "Freeze your best moments 📸"
+                "Three Decades of Stories, Framed Forever"
               </p>
               <p className="text-[10px] uppercase tracking-widest text-studio-gold mt-1 font-medium">
-                Chennai • Open to Travel ✈️🌍
+                Neelankarai, Chennai • Est. 1991
               </p>
             </div>
           </div>
@@ -275,13 +275,13 @@ export default function HomePage() {
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 text-center relative z-10">
         <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-studio-card to-studio-bg border border-studio-gold/40 space-y-6 max-w-4xl mx-auto shadow-2xl">
           <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">
-            Reserve Your Event Date
+            Reserve Your Session
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
-            Ready to Freeze Your Best Moments?
+            Ready to Frame Your Best Memories?
           </h2>
           <p className="text-xs sm:text-sm text-studio-muted max-w-lg mx-auto font-light leading-relaxed">
-            We accept a limited number of commissions each season to ensure uncompromising artistic dedication for every couple.
+            Serving Neelankarai, Chennai and celebrations across Tamil Nadu with professional photography, videography, printing, scanning and photo framing.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
             <Link

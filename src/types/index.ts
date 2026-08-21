@@ -1,12 +1,15 @@
 export type PortfolioCategory =
   | "All"
   | "Weddings"
+  | "Candid"
+  | "Portraits"
+  | "Families"
   | "Maternity"
-  | "Babyshower"
-  | "Kids"
-  | "Pre-Weddings"
-  | "Post-Weddings"
-  | "Events";
+  | "Newborn"
+  | "Studio"
+  | "Celebrations"
+  | "Quick Photo Services"
+  | "Photo Frames";
 
 export interface PortfolioItem {
   id: number;

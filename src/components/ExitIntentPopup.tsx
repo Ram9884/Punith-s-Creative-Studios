@@ -22,7 +22,7 @@ export const ExitIntentPopup = () => {
   }, [hasTriggered]);
 
   const whatsappUrl = `https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${encodeURIComponent(
-    "Hi Madhumitha K (chennaifemale_photographer), I'd like to check date availability for my upcoming shoot."
+    "Hi Sri Balaji Studios & Frames, I'd like to check date availability for my upcoming shoot."
   )}`;
 
   return (
@@ -57,7 +57,7 @@ export const ExitIntentPopup = () => {
               <span className="text-[10px] uppercase tracking-widest text-studio-gold font-medium">Before You Go</span>
               <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Checking Dates for Your Special Day?</h3>
               <p className="text-xs text-studio-muted max-w-sm mx-auto font-light leading-relaxed">
-                Popular dates book fast. Drop Madhumitha K a quick WhatsApp message to check date availability instantly.
+                Popular dates book fast. Drop Sri Balaji Studios & Frames a quick WhatsApp message to check date availability instantly.
               </p>
             </div>
 

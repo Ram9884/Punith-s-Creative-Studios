@@ -22,7 +22,7 @@ export const ColorGradingSlider = () => {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Signature Color Craft</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-studio-ivory">Raw Capture vs. Studio One Grade</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl text-studio-ivory">Raw Capture vs. Sri Balaji Master Grade</h2>
           <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
             Drag the slider to experience how we preserve authentic Indian skin tones while imbuing every frame with rich, timeless cinematic depth.
           </p>
@@ -37,13 +37,13 @@ export const ColorGradingSlider = () => {
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop"
-              alt="Studio One Signature Grade"
+              alt="Sri Balaji Signature Grade"
               fill
               sizes="(max-width: 1024px) 100vw, 80vw"
               className="object-cover"
             />
             <span className="absolute bottom-4 right-4 z-10 px-3 py-1 rounded-md bg-black/70 text-[10px] uppercase tracking-widest text-studio-gold font-semibold">
-              Studio One Signature Grade
+              Sri Balaji Signature Grade
             </span>
           </div>
 

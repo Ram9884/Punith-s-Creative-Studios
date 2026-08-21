@@ -11,7 +11,7 @@ export default function ServicesPage() {
         <span className="text-xs uppercase tracking-widest text-studio-gold">What Can You Hire Us For</span>
         <h1 className="font-serif text-4xl sm:text-6xl font-normal">Services & Offerings</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          We combine discreet candid photojournalism with cinematic wedding films. Every package is tailored to match the scale, location, and personality of your celebration.
+          From grand wedding celebrations and studio portraits to quick passport/visa photos, photo scanning, printing, and custom heirloom frames — Sri Balaji Studios & Frames provides comprehensive photography and studio services in Neelankarai, Chennai.
         </p>
       </div>
 

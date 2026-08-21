@@ -37,8 +37,8 @@ const CRAFT_TABS = [
     id: "philosophy",
     title: "Candid Philosophy",
     icon: Aperture,
-    headline: "Unobtrusive Documentary Storytelling",
-    description: "No forced smiles or staged poses. Madhumitha K moves quietly in the background, allowing real tears, spontaneous laughter, and authentic ritual energy to unfold naturally.",
+    headline: "Unobtrusive Storytelling",
+    description: "No forced smiles or staged poses. Our photographers move quietly in the background, allowing real tears, spontaneous laughter, and authentic ritual energy to unfold naturally.",
     stats: ["Zero Staged Interruption", "Pure Natural Light", "Intimate Portraiture"],
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
   }
@@ -59,7 +59,7 @@ export const BehindTheLensCraft = () => {
           Artistry & Technical Craft
         </h2>
         <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-          How chennaifemale_photographer combines cinema technology with documentary sensitivity to produce heirloom visual art.
+          How Sri Balaji Studios & Frames combines modern technology with studio sensitivity to produce heirloom visual art.
         </p>
       </div>
 

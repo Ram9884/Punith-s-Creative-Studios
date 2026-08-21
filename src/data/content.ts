@@ -6,262 +6,317 @@ import {
 } from "@/types";
 
 export const BRAND_INFO = {
-  name: "chennaifemale_photographer",
-  handle: "@chennaifemale_photographer",
-  photographerName: "Madhumitha K",
-  heroTagline: "Freeze your best moments 📸",
+  name: "Sri Balaji Studios & Frames",
+  handle: "@sribalaji_studios",
+  photographerName: "Sri Balaji Studios & Frames",
+  heroTagline: "Three Decades of Stories, Framed Forever.",
   heroDescription:
-    "Bespoke Wedding, Babyshower, Kids, and Maternity photography & videography by Madhumitha K. Based in Chennai, available to travel worldwide. ஸ்ரீ ✨",
-  positioning: "Photography & Videography | ஸ்ரீ ✨",
+    "Since 1991, Sri Balaji Studios & Frames has been capturing portraits, celebrations and memories while providing professional photography, videography, printing and framing services in Neelankarai, Chennai.",
+  positioning: "Photography Studio • Est. 1991",
   heroCTA: {
-    primary: "Book Your Shoot",
-    secondary: "Explore Our Work",
+    primary: "Explore Our Work",
+    secondary: "Book a Session",
   },
   about: {
-    heading: "Freeze Your Best Moments",
+    heading: "Three Decades of Stories, Framed Forever",
     description:
-      "Welcome to chennaifemale_photographer by Madhumitha K. We specialize in capturing life's most precious milestones — from grand Weddings and intimate Maternity sessions to joyful Babyshower and Kids photography. Every frame is crafted with heart, preserving authentic smiles and timeless emotions. Based in Chennai and open to travel worldwide. ஸ்ரீ ✨",
+      "Sri Balaji Studios & Frames has been serving customers in Neelankarai, Chennai since 1991. Over the years, the studio has evolved with modern photography and videography while continuing to provide dependable studio and photo services for individuals, families and celebrations.",
   },
   contact: {
-    location: "Chennai • Open to Travel ✈️🌍",
-    address: "Chennai, Tamil Nadu, India (Open to Travel Worldwide ✈️🌍)",
-    phone: "+91 73973 31508",
-    phoneRaw: "7397331508",
-    whatsappNumber: "917397331508",
-    instagram: "@chennaifemale_photographer",
-    instagramUrl: "https://instagram.com/chennaifemale_photographer",
-    youtubeUrl: "https://www.youtube.com/watch?v=wQjK71E5IXs&t=33s",
-    youtubeShortUrl: "https://youtu.be/3x2V7l_kdNM",
-    googleMapsUrl: "https://maps.app.goo.gl/dH1hQE42BtYJTpCw9?g_st=iw",
+    location: "Neelankarai, Chennai",
+    address:
+      "Shop No. 4/110, Neelankarai ECR, Opposite Lenskart Opticals, Next to Indian Bank, East Coast Road, Neelankarai, Chennai – 600115, Tamil Nadu, India",
+    phone: "+91 98844 79061",
+    phoneRaw: "+919884479061",
+    whatsappNumber: "919884479061",
+    instagram: "Sri Balaji Studios & Frames",
+    instagramUrl: "https://wa.me/919884479061",
+    youtubeUrl: "https://wa.me/919884479061",
+    youtubeShortUrl: "https://wa.me/919884479061",
+    googleMapsUrl:
+      "https://maps.google.com/?q=Sri+Balaji+Studios+%26+Frames+Neelankarai+Chennai",
   },
   footer: {
-    brandName: "chennaifemale_photographer",
-    photographer: "Madhumitha K",
-    tagline: "Freeze your best moments 📸 • ஸ்ரீ ✨",
+    brandName: "Sri Balaji Studios & Frames",
+    photographer: "Sri Balaji Studios & Frames",
+    tagline: "Photography • Videography • Printing • Scanning • Frames",
     subtext:
-      "Madhumitha K | Wedding, Babyshower, Kids & Maternity Photography & Videography | Open to Travel Worldwide ✈️🌍",
+      "Sri Balaji Studios & Frames | Professional photography, videography, passport/visa photos, printing, scanning & custom frames in Neelankarai, Chennai since 1991.",
   },
 };
 
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - 1991;
+
 export const STATS = [
-  { value: "38.4K+", label: "Instagram Followers" },
-  { value: "953", label: "Posts Shared" },
-  { value: "1,578", label: "Following" },
-  { value: "5.0★", label: "Google Rating" },
+  { value: "1991", label: "Established" },
+  { value: `${yearsOfExperience}+`, label: "Years of Experience" },
+  { value: "4.4★", label: "Google Rating" },
+  { value: "80+", label: "Google Reviews" },
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
     category: "Weddings",
-    title: "Ananya & Siddharth — Wedding Story",
-    location: "Chennai Heritage Mandap",
+    title: "Grand Tamil Wedding Celebration",
+    location: "Neelankarai, Chennai",
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
     description:
-      "A rich South Indian wedding framed with traditional silk nuances, candid family laughter, and emotional rituals.",
+      "Comprehensive wedding photography capturing authentic mandap rituals, silk nuances, and joyful family celebrations.",
     quote:
-      "Madhumitha captured every tiny ritual and candid tear so beautifully. We relived the entire day watching our photos!",
+      "Sri Balaji Studios & Frames captured our wedding beautifully. Every emotion and ritual was preserved with care.",
     couple: "Ananya & Siddharth",
   },
   {
     id: 2,
+    category: "Candid",
+    title: "Spontaneous Celebration Moments",
+    location: "ECR Seaside Venue, Chennai",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Unscripted candid photography documenting natural smiles and organic joy throughout the festivities.",
+    quote: "The candid photos felt so natural and filled with life.",
+    couple: "Ritika & Rohan",
+  },
+  {
+    id: 3,
+    category: "Portraits",
+    title: "Classic Indoor Studio Portraiture",
+    location: "Sri Balaji Studio, Neelankarai",
+    image:
+      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "Professional studio portraits with refined lighting and high-clarity finishing.",
+    quote: "Superb studio & Quality's are best.",
+    couple: "Individual Portrait Client",
+  },
+  {
+    id: 4,
     category: "Maternity",
-    title: "Serene Motherhood — Kavya's Maternity Session",
+    title: "Maternity & Motherhood Portraits",
     location: "Mahabalipuram Coastal Sunrise",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Soft golden hour lighting emphasizing the beauty and anticipation of new motherhood by the ocean breeze.",
-    quote:
-      "Madhumitha made me feel so comfortable and radiant during my maternity shoot. The photos are pure art.",
+      "Beautiful maternity portraits designed to preserve this special stage of life.",
+    quote: "Gentle and patient studio session. The final prints look stunning in our home.",
     couple: "Kavya S.",
   },
   {
-    id: 3,
-    category: "Babyshower",
-    title: "Joyous Seemantham — Divine Blessings",
-    location: "Chennai Traditional Residence",
+    id: 5,
+    category: "Newborn",
+    title: "Newborn & Milestone Memories",
+    location: "Sri Balaji Studio, Neelankarai",
     image:
       "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Vibrant traditional babyshower celebrations filled with jasmine garlands, glass bangles, and grandmotherly blessings.",
-    quote:
-      "Every smile and ritual detail was recorded with such heartwarming elegance.",
+      "Gentle and memorable photography for newborns and growing families.",
+    quote: "Carefully handled and captured baby expressions beautifully.",
     couple: "Deepika & Ashwin",
   },
   {
-    id: 4,
-    category: "Kids",
-    title: "First Milestone — Aarav's 1st Birthday",
-    location: "ECR Lawn Venue, Chennai",
-    image:
-      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "Unscripted childhood wonder, cake smash laughs, and playful family moments captured in natural light.",
-    quote:
-      "She has a magical way with kids! Aarav was laughing throughout the shoot.",
-    couple: "Priya & Rajesh (Parents)",
-  },
-  {
-    id: 5,
-    category: "Pre-Weddings",
-    title: "Ritika & Rohan — Romantic Promenade",
-    location: "Pondicherry Heritage French Quarter",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "Cinematic couple portraits framed amidst pastel colonial lanes and quiet seaside atmosphere.",
-    quote: "Working with Madhumitha was completely relaxed and effortless.",
-    couple: "Ritika & Rohan",
-  },
-  {
     id: 6,
-    category: "Events",
-    title: "Sangeet Night & Gala Reception",
-    location: "ITC Grand Chola, Chennai",
+    category: "Photo Frames",
+    title: "Custom Heirloom Wood & Acrylic Framing",
+    location: "Sri Balaji Frames Workshop",
     image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1200&auto=format&fit=crop",
     description:
-      "High-energy dance performances and colorful family celebration moments documented with crisp clarity.",
-    couple: "Nandini & Karan",
+      "Turn your favorite photographs into durable, elegantly framed wall art and desktop displays.",
+    quote: "Superb framing quality and fast delivery. Very satisfied!",
+    couple: "Framing Client",
   },
 ];
 
 export const WEDDING_FILMS = [
   {
     id: "film-1",
-    title: "Eternal Vows — Ananya & Siddharth",
-    location: "Chennai Heritage Mandap",
-    duration: "3:45 Film",
+    title: "Wedding Stories — Celebration Highlight",
+    location: "Neelankarai, Chennai",
+    duration: "4K Film",
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     description:
-      "A cinematic motion film scored with emotional vows and classical strings by Madhumitha K.",
+      "From intimate moments to grand celebrations, preserve the emotions, people and memories that make your wedding unforgettable.",
   },
   {
     id: "film-2",
-    title: "Babyshower & Blessing Story",
+    title: "Celebration & Reception Coverage",
     location: "ECR Beachfront Venue, Chennai",
-    duration: "2:30 Reel",
+    duration: "Full HD Video",
     image:
       "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Vibrant Seemantham highlight reel capturing flower showers, happy smiles, and family warmth.",
+      "Professional videography documenting grand stage entries, musical events, and family gatherings.",
   },
 ];
 
 export const SERVICES: ServiceItem[] = [
   {
     id: "wedding-photography",
-    title: "Wedding Photography & Videography 📸🎬",
-    tagline: "Documentary & editorial wedding coverage.",
+    title: "Wedding Photography 📸",
+    tagline: "Capture important moments, emotions & celebrations.",
     description:
-      "Comprehensive coverage capturing authentic mandap rituals, unscripted emotions, family warmth, and high-resolution heirloom portraits.",
+      "Capture the important moments, emotions and celebrations of weddings with dependable photography and coverage.",
     deliverables: [
-      "High-resolution color-graded photo gallery",
-      "Cinematic Teaser & Full Wedding Film (4K)",
-      "Fine-art handcrafted album curation",
+      "High-resolution color-corrected photo gallery",
+      "Traditional & candid event coverage",
+      "Custom wedding photo album curation",
     ],
     categoryFilter: "Weddings",
   },
   {
-    id: "maternity-photography",
-    title: "Maternity Photography 🤰✨",
-    tagline: "Dreamy, elegant pregnancy portrait sessions.",
+    id: "candid-photography",
+    title: "Candid Photography ✨",
+    tagline: "Natural and spontaneous moments captured effortlessly.",
     description:
-      "Celebrate the magic of new life with soft, aesthetic maternity portraiture tailored to make every expectant mother feel graceful and celebrated.",
+      "Natural and spontaneous moments captured throughout your celebration without forced poses.",
     deliverables: [
-      "Studio & scenic outdoor location setup",
-      "Gown & styling guidance",
-      "High-resolution retouched gallery pack",
+      "Unscripted ceremony & reception moments",
+      "High-resolution digital downloads",
+      "Express selection turnaround",
+    ],
+    categoryFilter: "Candid",
+  },
+  {
+    id: "portrait-photography",
+    title: "Portrait Photography 👤",
+    tagline: "Professional portraits for individuals & families.",
+    description:
+      "Professional portraits for individuals, families and special occasions in controlled studio lighting or scenic outdoor settings.",
+    deliverables: [
+      "Controlled studio studio lighting setup",
+      "High-definition retouching & color grade",
+      "Ready-to-print digital files",
+    ],
+    categoryFilter: "Portraits",
+  },
+  {
+    id: "maternity-photography",
+    title: "Maternity Photography 🤰",
+    tagline: "Preserve life's most meaningful beginnings.",
+    description:
+      "Beautiful maternity portraits designed to preserve this special stage of life with comfort and elegance.",
+    deliverables: [
+      "Comfortable indoor studio or outdoor shoot",
+      "Family & partner portrait inclusion",
+      "Custom photo print options",
     ],
     categoryFilter: "Maternity",
   },
   {
-    id: "babyshower-photography",
-    title: "Babyshower / Seemantham Coverage 🍼💛",
-    tagline: "Traditional ritual & festive family celebration.",
+    id: "newborn-photography",
+    title: "Newborn Photography 👶",
+    tagline: "Gentle and memorable photography for newborns.",
     description:
-      "Documenting bangles, floral rituals, elder blessings, and joyous family dining during your traditional babyshower ceremonies.",
+      "Gentle and memorable photography for newborns and growing families in a safe, peaceful environment.",
     deliverables: [
-      "Full event candid & group coverage",
-      "Highlight video reel for social media",
-      "Fast preview gallery turnaround",
+      "Warm & comfortable studio environment",
+      "Gentle child-first session pacing",
+      "High-resolution memory archive",
     ],
-    categoryFilter: "Babyshower",
+    categoryFilter: "Newborn",
   },
   {
-    id: "kids-photography",
-    title: "Kids & Baby Portraiture 👶🎉",
-    tagline: "First birthdays, cake smashes & milestone memories.",
+    id: "studio-photography",
+    title: "Studio Photography 🏢",
+    tagline: "Professional indoor photography.",
     description:
-      "Patient, fun-filled photo sessions capturing your baby's innocent smiles, playful giggles, and milestone celebrations in a comfortable environment.",
+      "Professional indoor photography for portraits, family photos, corporate profiles, and special requirements.",
     deliverables: [
-      "Unrushed child-friendly shoot pace",
-      "Creative theme setups & props guidance",
-      "Digital high-res print files",
+      "State-of-the-art studio background options",
+      "Instant review and selection",
+      "Same-day or fast digital delivery",
     ],
-    categoryFilter: "Kids",
+    categoryFilter: "Studio",
   },
   {
-    id: "pre-wedding",
-    title: "Pre-Wedding & Couple Sessions ❤️",
-    tagline: "Romantic couple stories & destination shoots.",
+    id: "videography",
+    title: "Videography 🎬",
+    tagline: "Professional video coverage for events.",
     description:
-      "Relaxed guided photo and reel sessions at scenic beach resorts, heritage streets, or outdoor spots before your big day.",
+      "Professional video coverage for weddings, celebrations, corporate functions and special occasions.",
     deliverables: [
-      "Concept & location planning",
-      "Multiple outfit & mood setups",
-      "Save-the-date graphics & reel pack",
+      "High-definition / 4K event recording",
+      "Edited highlight reel & ceremony footage",
+      "Digital delivery via drive or USB",
     ],
-    categoryFilter: "Pre-Weddings",
+    categoryFilter: "Celebrations",
   },
   {
-    id: "event-photography",
-    title: "Events & Milestone Celebrations 🎉",
-    tagline: "Sangeet, Haldi, Engagements & Receptions.",
+    id: "passport-visa-photos",
+    title: "Passport & Visa Photos 🛂",
+    tagline: "Quick professional passport and visa photographs.",
     description:
-      "High-energy coverage of family functions, engagement ring ceremonies, sangeet performances, and milestone gatherings.",
+      "Quick professional passport and visa photographs adhering strictly to government and international embassy specifications.",
     deliverables: [
-      "Guest & decor documentation",
-      "High-speed digital delivery",
-      "Print-ready full resolution files",
+      "Biometric compliance for all countries",
+      "Quick turnaround within 30 minutes",
+      "Printed photo sheet + digital copy",
     ],
-    categoryFilter: "Events",
+    categoryFilter: "Quick Photo Services",
+  },
+  {
+    id: "photo-printing-scanning",
+    title: "Photo Printing & Scanning 🖨️",
+    tagline: "High-quality prints & digital restoration.",
+    description:
+      "Photo printing, high-resolution scanning, photo enlargement, and digital restoration studio services.",
+    deliverables: [
+      "Glossy, matte & luster photo papers",
+      "High-resolution archival scanning",
+      "Old photo digitizing & scratch repair",
+    ],
+    categoryFilter: "Quick Photo Services",
+  },
+  {
+    id: "photo-frames",
+    title: "Photo Frames 🖼️",
+    tagline: "Preserve photographs with professional framing options.",
+    description:
+      "Preserve photographs with professional framing options, custom border mats, and durable wall mounts.",
+    deliverables: [
+      "Wide selection of wooden & modern frames",
+      "Glass & acrylic protective face options",
+      "Custom sizing & tabletop mounts",
+    ],
+    categoryFilter: "Photo Frames",
   },
 ];
 
 export const EXPERIENCE_STEPS: ExperienceStep[] = [
   {
     step: "01",
-    title: "Say Hello",
-    subtitle: "Inquire & Date Check",
+    title: "Visit or Call Us",
+    subtitle: "Inquire & Studio Visit",
     description:
-      "Contact Madhumitha via WhatsApp or our booking portal with your dates and event location.",
+      "Visit our studio at Neelankarai ECR or call +91 98844 79061 to discuss your requirements.",
   },
   {
     step: "02",
-    title: "Let's Plan",
-    subtitle: "Vision & Concept",
+    title: "Plan Your Session",
+    subtitle: "Schedule & Requirements",
     description:
-      "We discuss your shoot style, outfit choices, ritual timings, and preferred aesthetics.",
+      "We help choose the right service — whether it is event photography, studio portraits, visa photos, or framing.",
   },
   {
     step: "03",
-    title: "We Capture",
-    subtitle: "Freeze The Moment",
+    title: "Capture & Create",
+    subtitle: "Professional Execution",
     description:
-      "Relax and enjoy your event while Madhumitha captures genuine smiles and organic emotions.",
+      "Our team provides patient studio sessions, quick photo processing, or comprehensive event coverage.",
   },
   {
     step: "04",
-    title: "Relive It",
-    subtitle: "Heirloom Galleries & Reels",
+    title: "Deliver & Frame",
+    subtitle: "Prints, Films & Frames",
     description:
-      "Receive your beautifully color-graded photo galleries, reels, and custom albums.",
+      "Receive high-clarity photos, edited videos, quick prints, or beautifully framed heirloom memories.",
   },
 ];
 
@@ -269,35 +324,35 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
     quote:
-      "Madhumitha captured our wedding and seemantham so effortlessly! Her patience and eye for candid moments made our photos look like a dream. 5.0 stars well deserved!",
-    author: "Deepika & Ashwin",
-    event: "Wedding & Babyshower",
-    location: "Chennai",
+      "Went for passport/visa photos got done within 30 minutes.",
+    author: "Satisfied Customer",
+    event: "Passport & Visa Photo Service",
+    location: "Neelankarai, Chennai",
+    rating: 5,
+    image:
+      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=600&auto=format&fit=crop",
+  },
+  {
+    id: 2,
+    quote:
+      "Superb studio & Quality's are best.",
+    author: "Local Resident",
+    event: "Studio Photography & Framing",
+    location: "Neelankarai, Chennai",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop",
   },
   {
-    id: 2,
-    quote:
-      "Our maternity shoot in Mahabalipuram was so comfortable and memorable. Madhumitha guided us gently through poses and captured pure magic.",
-    author: "Kavya & Vikram",
-    event: "Maternity Session",
-    location: "Mahabalipuram",
-    rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop",
-  },
-  {
     id: 3,
     quote:
-      "From my baby's 1st birthday shoot to our family function, chennaifemale_photographer is our go-to choice. Highly recommended!",
-    author: "Priya & Rajesh",
-    event: "Kids & Family Shoot",
-    location: "Chennai",
+      "I visited for passport scan and visa photo. good service they provide.",
+    author: "Verified Reviewer",
+    event: "Photo Scanning & Visa Photos",
+    location: "Neelankarai, Chennai",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop",
   },
 ];
 
@@ -329,8 +384,8 @@ export const SOCIAL_MOMENTS = [
   {
     id: 5,
     image:
-      "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=600&auto=format&fit=crop",
-    type: "reel",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop",
+    type: "photo",
   },
   {
     id: 6,
@@ -343,38 +398,38 @@ export const SOCIAL_MOMENTS = [
 export const CALCULATOR_SERVICES = [
   {
     id: "wedding_coverage",
-    name: "Full Wedding Photography & Cinematic Film",
-    price: 65000,
+    name: "Wedding Photography & Video Coverage",
+    price: 45000,
     category: "Wedding",
   },
   {
-    id: "maternity_shoot",
-    name: "Maternity Photography Session (Indoor/Outdoor)",
+    id: "candid_photography",
+    name: "Candid Celebration Photography",
     price: 25000,
+    category: "Candid",
+  },
+  {
+    id: "portrait_studio",
+    name: "Indoor Studio Family / Individual Portrait",
+    price: 5000,
+    category: "Studio",
+  },
+  {
+    id: "maternity_newborn",
+    name: "Maternity / Newborn Photography Session",
+    price: 15000,
     category: "Maternity",
   },
   {
-    id: "babyshower_event",
-    name: "Babyshower / Seemantham Event Coverage",
-    price: 30000,
-    category: "Babyshower",
+    id: "passport_visa",
+    name: "Passport & Visa Photos (Instant Print Set)",
+    price: 250,
+    category: "Studio Service",
   },
   {
-    id: "kids_birthday",
-    name: "Kids Birthday & Baby Milestone Shoot",
-    price: 20000,
-    category: "Kids",
-  },
-  {
-    id: "reels_pack",
-    name: "Vertical Instagram Reels Fast-Delivery Pack (3 Reels)",
-    price: 15000,
-    category: "Addon",
-  },
-  {
-    id: "luxury_album",
-    name: "Handcrafted Fine-Art Canvera/Leather Album",
-    price: 18000,
-    category: "Addon",
+    id: "custom_framing",
+    name: "Custom Photo Framing & Enlargement Print",
+    price: 3500,
+    category: "Framing",
   },
 ];

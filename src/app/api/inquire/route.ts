@@ -29,12 +29,12 @@ export async function POST(request: Request) {
 
     const emailSubject =
       source === "consultation_modal"
-        ? `[chennaifemale_photographer] New Consultation Booking: ${name}`
-        : `[chennaifemale_photographer] New Shoot Inquiry: ${name}`;
+        ? `[Sri Balaji Studios & Frames] New Consultation Booking: ${name}`
+        : `[Sri Balaji Studios & Frames] New Inquiry: ${name}`;
 
     // Format detailed message body
     const messageLines = [
-      `📸 NEW CLIENT INQUIRY - CHENNAIFEMALE_PHOTOGRAPHER (Madhumitha K)`,
+      `📸 NEW CLIENT INQUIRY - SRI BALAJI STUDIOS & FRAMES`,
       `----------------------------------------`,
       `Client Name: ${name}`,
       `Phone / WhatsApp: ${phone}`,
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     if (message) messageLines.push(`\nClient Message / Vision:\n${message}`);
 
     messageLines.push(`----------------------------------------`);
-    messageLines.push(`Submitted via website: chennaifemale_photographer (${source})`);
+    messageLines.push(`Submitted via website: Sri Balaji Studios & Frames (${source})`);
 
     const fullMessage = messageLines.join("\n");
 
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           access_key: accessKey,
           subject: emailSubject,
-          from_name: "chennaifemale_photographer Website",
+          from_name: "Sri Balaji Studios & Frames Website",
           name: name,
           phone: phone,
           email_to: recipientEmail,

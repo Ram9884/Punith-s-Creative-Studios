@@ -62,16 +62,16 @@ export default function InquirePage() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Madhumitha K (chennaifemale_photographer), I'm inquiring about date availability for ${weddingDate || "my event"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
+    `Hello Sri Balaji Studios & Frames, I'm inquiring about date availability / session details for ${weddingDate || "my event"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
   );
 
   return (
     <main className="max-w-7xl mx-auto px-6 pt-10 sm:pt-14 pb-16">
       <div className="max-w-3xl space-y-4 mb-12">
         <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">Start The Conversation</span>
-        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Freeze Your Best Moments</h1>
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Contact Sri Balaji Studios & Frames</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          Tell us about your celebration. chennaifemale_photographer by Madhumitha K accepts a limited number of commissions each season to ensure uncompromising artistic dedication for every client.
+          Tell us about your requirement or celebration. Operating since 1991 in Neelankarai, Chennai, our team provides wedding photography, candid shoots, studio portraits, visa photos, scanning, printing and custom photo framing.
         </p>
       </div>
 
@@ -123,9 +123,9 @@ export default function InquirePage() {
           </div>
 
           <div className="p-6 rounded-2xl border border-studio-border/60 bg-studio-card/30 text-xs text-studio-muted space-y-2">
-            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Peak Season Notice</p>
+            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Studio Operating Hours</p>
             <p className="font-light leading-relaxed">
-              Wedding season dates between October and March fill quickly. We recommend reserving dates 4 to 8 months in advance.
+              Open daily in Neelankarai, ECR Chennai. Walk-ins welcome for passport/visa photos, prints, scanning, and photo frames.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function InquirePage() {
               </div>
               <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
               <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed font-light">
-                Thank you for reaching out. An email notification has been dispatched to our team (sachin988451@gmail.com). We will review date availability and get back to you via WhatsApp or call within 24 hours.
+                Thank you for reaching out to Sri Balaji Studios & Frames. We have received your message and will get back to you via call or WhatsApp shortly.
               </p>
               <div className="pt-4">
                 <a
@@ -175,7 +175,7 @@ export default function InquirePage() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+91 73973 31508"
+                    placeholder="+91 98844 79061"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
@@ -191,11 +191,13 @@ export default function InquirePage() {
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   >
                     <option value="Weddings">Weddings</option>
-                    <option value="Maternity">Maternity</option>
-                    <option value="Babyshower">Babyshower</option>
-                    <option value="Kids">Kids / Baby Milestone</option>
-                    <option value="Pre-Weddings">Pre-Weddings</option>
-                    <option value="Events">Events</option>
+                    <option value="Candid Photography">Candid Photography</option>
+                    <option value="Portraits & Family">Portraits & Family</option>
+                    <option value="Maternity & Newborn">Maternity & Newborn</option>
+                    <option value="Passport & Visa Photos">Passport & Visa Photos</option>
+                    <option value="Photo Printing & Scanning">Photo Printing & Scanning</option>
+                    <option value="Custom Photo Frames">Custom Photo Frames</option>
+                    <option value="Videography">Videography</option>
                   </select>
                 </div>
 

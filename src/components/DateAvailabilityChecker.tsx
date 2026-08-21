@@ -35,7 +35,7 @@ export const DateAvailabilityChecker = () => {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Madhumitha K (chennaifemale_photographer), I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if you are open for bookings on my date!`
+    `Hello Sri Balaji Studios & Frames, I checked availability on your website for ${selectedMonth} in ${selectedCity}. Please confirm if you are open for bookings on my date!`
   );
 
   return (
@@ -55,7 +55,7 @@ export const DateAvailabilityChecker = () => {
               Check Your Event Date & Venue Availability
             </h2>
             <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-              To ensure dedicated artistic focus for every client, chennaifemale_photographer accepts a limited number of commissions per season across Tamil Nadu and destination venues.
+              To ensure dedicated focus and artistic quality for every client, Sri Balaji Studios & Frames accepts commissions across Neelankarai, Chennai and destination venues.
             </p>
             <div className="pt-2 flex items-center gap-4 text-xs text-studio-gold/90">
               <div className="flex items-center gap-1.5">
