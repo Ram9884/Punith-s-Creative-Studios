@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { BRAND_INFO } from "@/data/content";
 
 export async function POST(request: Request) {
   try {
@@ -29,12 +30,12 @@ export async function POST(request: Request) {
 
     const emailSubject =
       source === "consultation_modal"
-        ? `[Sri Balaji Studios & Frames] New Consultation Booking: ${name}`
-        : `[Sri Balaji Studios & Frames] New Inquiry: ${name}`;
+        ? `[${BRAND_INFO.name}] New Consultation Booking: ${name}`
+        : `[${BRAND_INFO.name}] New Inquiry: ${name}`;
 
     // Format detailed message body
     const messageLines = [
-      `📸 NEW CLIENT INQUIRY - SRI BALAJI STUDIOS & FRAMES`,
+      `📸 NEW CLIENT INQUIRY - ${BRAND_INFO.name.toUpperCase()}`,
       `----------------------------------------`,
       `Client Name: ${name}`,
       `Phone / WhatsApp: ${phone}`,
@@ -48,7 +49,7 @@ export async function POST(request: Request) {
     if (message) messageLines.push(`\nClient Message / Vision:\n${message}`);
 
     messageLines.push(`----------------------------------------`);
-    messageLines.push(`Submitted via website: Sri Balaji Studios & Frames (${source})`);
+    messageLines.push(`Submitted via website: ${BRAND_INFO.name} (${source})`);
 
     const fullMessage = messageLines.join("\n");
 
@@ -63,7 +64,7 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           access_key: accessKey,
           subject: emailSubject,
-          from_name: "Sri Balaji Studios & Frames Website",
+          from_name: `${BRAND_INFO.name} Website`,
           name: name,
           phone: phone,
           email_to: recipientEmail,
@@ -82,31 +83,6 @@ export async function POST(request: Request) {
       } else {
         console.warn("Web3Forms warning:", data);
       }
-    }
-
-    // Fallback: Formspree or Direct endpoint if Web3Forms key isn't activated yet
-    const formspreeResponse = await fetch(`https://formspree.io/f/${recipientEmail}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        _subject: emailSubject,
-        name,
-        phone,
-        category,
-        weddingDate,
-        venue,
-        message: fullMessage,
-      }),
-    });
-
-    if (formspreeResponse.ok) {
-      return NextResponse.json({
-        success: true,
-        message: "Inquiry sent successfully via Formspree!",
-      });
     }
 
     // Return success to client so user UI succeeds, with console notice

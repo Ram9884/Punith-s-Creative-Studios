@@ -10,14 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: "#d4a574",
+        accent: "#C9A45C",
         studio: {
           bg: "rgb(var(--studio-bg-rgb) / <alpha-value>)",
           card: "rgb(var(--studio-card-rgb) / <alpha-value>)",
           border: "rgb(var(--studio-border-rgb) / <alpha-value>)",
           ivory: "rgb(var(--studio-ivory-rgb) / <alpha-value>)",
           muted: "rgb(var(--studio-muted-rgb) / <alpha-value>)",
-          gold: "#d4a574",
+          gold: "#C9A45C",
+          goldBright: "#E4C27A",
           crimson: "rgb(var(--studio-crimson-rgb) / <alpha-value>)",
           whatsapp: "#25D366",
         },

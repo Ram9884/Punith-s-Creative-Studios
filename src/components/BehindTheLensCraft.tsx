@@ -10,9 +10,9 @@ const CRAFT_TABS = [
     id: "cinema",
     title: "4K Cinema Optics",
     icon: Camera,
-    headline: "RED & Sony Full-Frame Cinema Cameras",
-    description: "We utilize high dynamic range digital cinema cameras paired with prime lenses to deliver true filmic texture, rich skin tones, and incredible low-light depth.",
-    stats: ["12-bit RAW Color", "60fps Slow Motion", "Dual ISO Low-Light"],
+    headline: "Sony & Canon Full-Frame Cinema Systems",
+    description: "We utilize high dynamic range cinema cameras paired with prime lenses to deliver true filmic texture, rich skin tones, and incredible clarity.",
+    stats: ["10-bit RAW Color", "Slow Motion Video", "Dual ISO Low-Light"],
     image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
   },
   {
@@ -21,16 +21,16 @@ const CRAFT_TABS = [
     icon: Sliders,
     headline: "Custom Color Grading & Film Emulation",
     description: "Every frame undergoes bespoke color grading in DaVinci Resolve. We blend authentic skin tones with rich heritage gold hues for a timeless aesthetic.",
-    stats: ["35mm Film Grain", "Custom LUT Pipeline", "Skin Tone Preservation"],
+    stats: ["Color Science", "Custom Tone Curve", "Skin Preservation"],
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200&auto=format&fit=crop"
   },
   {
     id: "aerial",
-    title: "Aerial Cinematography",
+    title: "Aerial Coverage",
     icon: Film,
-    headline: "Licensed 4K Drone Perspectives",
-    description: "Capture the epic grandeur of coastal beach resorts, heritage estates, and lush outdoor mandaps from breathtaking high-angle aerial views.",
-    stats: ["4K HDR Aerial", "Smooth Stabilized Orbit", "Fully Licensed Operators"],
+    headline: "4K Drone Perspectives",
+    description: "Capture the grandeur of outdoor venues, heritage estates, and wedding locations from breathtaking high-angle aerial views.",
+    stats: ["4K HDR Aerial", "Smooth Stabilized Orbit", "Professional Flight"],
     image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1200&auto=format&fit=crop"
   },
   {
@@ -38,8 +38,8 @@ const CRAFT_TABS = [
     title: "Candid Philosophy",
     icon: Aperture,
     headline: "Unobtrusive Storytelling",
-    description: "No forced smiles or staged poses. Our photographers move quietly in the background, allowing real tears, spontaneous laughter, and authentic ritual energy to unfold naturally.",
-    stats: ["Zero Staged Interruption", "Pure Natural Light", "Intimate Portraiture"],
+    description: "No forced smiles or stiff poses. Punith moves quietly in the background, allowing real emotion, laughter, and rituals to unfold naturally.",
+    stats: ["Zero Interruption", "Natural Light Focus", "Authentic Expressions"],
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
   }
 ];
@@ -59,7 +59,7 @@ export const BehindTheLensCraft = () => {
           Artistry & Technical Craft
         </h2>
         <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-          How Sri Balaji Studios & Frames combines modern technology with studio sensitivity to produce heirloom visual art.
+          How {BRAND_INFO.name} combines modern technology with artistic sensitivity to produce heirloom visual stories.
         </p>
       </div>
 
@@ -125,4 +125,3 @@ export const BehindTheLensCraft = () => {
     </section>
   );
 };
-

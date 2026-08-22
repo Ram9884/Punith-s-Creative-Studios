@@ -38,7 +38,7 @@ export const SocialMoments = () => {
           >
             <Image
               src={moment.image}
-              alt="Sri Balaji Studios & Frames Social Moment"
+              alt={`${BRAND_INFO.name} Social Moment`}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 16vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -55,4 +55,4 @@ export const SocialMoments = () => {
       </div>
     </section>
   );
-};
+};

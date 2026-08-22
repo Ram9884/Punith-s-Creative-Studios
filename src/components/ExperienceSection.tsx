@@ -1,14 +1,14 @@
 import React from "react";
-import { EXPERIENCE_STEPS } from "@/data/content";
+import { EXPERIENCE_STEPS, BRAND_INFO } from "@/data/content";
 
 export const ExperienceSection = () => {
   return (
     <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6">
       <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
         <span className="text-xs uppercase tracking-widest text-studio-gold">The Journey</span>
-        <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">The Sri Balaji Experience</h2>
+        <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">The {BRAND_INFO.name} Experience</h2>
         <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-          How we make your photographic journey effortless, warm, and completely stress-free from the first hello to delivery.
+          How we make your photographic journey effortless, authentic, and completely stress-free from first consultation to final delivery.
         </p>
       </div>
 

@@ -1,33 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
-import { CALCULATOR_SERVICES, BRAND_INFO } from "@/data/content";
-import { Check, MessageCircle, Calculator } from "lucide-react";
+import { SERVICES, BRAND_INFO } from "@/data/content";
+import { Check, MessageCircle, Sparkles } from "lucide-react";
 
 export const BudgetCalculator = () => {
-  const [selectedIds, setSelectedIds] = useState<string[]>([
-    "wedding_coverage",
-    "candid_photography"
+  const [selectedTitles, setSelectedTitles] = useState<string[]>([
+    "Wedding Photography",
+    "Wedding Videography",
   ]);
 
-  const toggleService = (id: string) => {
-    setSelectedIds((prev) =>
-      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+  const toggleService = (title: string) => {
+    setSelectedTitles((prev) =>
+      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
     );
   };
 
-  const totalEstimate = selectedIds.reduce((sum, id) => {
-    const item = CALCULATOR_SERVICES.find((s) => s.id === id);
-    return sum + (item ? item.price : 0);
-  }, 0);
-
-  const selectedNames = selectedIds
-    .map((id) => CALCULATOR_SERVICES.find((s) => s.id === id)?.name)
-    .filter(Boolean)
-    .join(", ");
+  const selectedListString = selectedTitles.join(", ");
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Sri Balaji Studios & Frames, I customized a package estimate on your website for ₹${totalEstimate.toLocaleString("en-IN")}. Services: ${selectedNames}. Please confirm availability for my preferred dates!`
+    `Hello ${BRAND_INFO.name}, I would like to discuss a custom shoot quote for the following services: ${selectedListString}. Please let me know your availability!`
   );
 
   return (
@@ -35,28 +27,28 @@ export const BudgetCalculator = () => {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <div className="inline-flex items-center gap-1.5 text-studio-gold text-xs uppercase tracking-widest font-semibold mb-1">
-            <Calculator className="w-3.5 h-3.5" />
-            <span>Interactive Estimate Builder</span>
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Custom Shoot Requirement</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Customize Your Photography & Framing Package</h3>
-          <p className="text-xs text-studio-muted font-light mt-1">Select the services you need for transparent ballpark pricing.</p>
+          <h3 className="font-serif text-2xl sm:text-3xl text-studio-ivory">Tell Us About Your Shoot</h3>
+          <p className="text-xs text-studio-muted font-light mt-1">Select the services you require for a personalized consultation with Punith.</p>
         </div>
 
-        <div className="p-4 rounded-xl bg-studio-bg border border-studio-gold/40 text-right min-w-[200px]">
-          <span className="text-[10px] uppercase tracking-widest text-studio-muted block">Estimated Investment</span>
-          <span className="font-serif text-3xl text-studio-gold font-semibold">
-            ₹{totalEstimate.toLocaleString("en-IN")}
+        <div className="p-4 rounded-xl bg-studio-bg border border-studio-gold/40 text-left sm:text-right min-w-[200px]">
+          <span className="text-[10px] uppercase tracking-widest text-studio-muted block">Selected Services</span>
+          <span className="font-serif text-2xl text-studio-gold font-semibold">
+            {selectedTitles.length} {selectedTitles.length === 1 ? "Service" : "Services"}
           </span>
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {CALCULATOR_SERVICES.map((srv) => {
-          const isSelected = selectedIds.includes(srv.id);
+        {SERVICES.map((srv) => {
+          const isSelected = selectedTitles.includes(srv.title);
           return (
             <div
               key={srv.id}
-              onClick={() => toggleService(srv.id)}
+              onClick={() => toggleService(srv.title)}
               className={`p-4 rounded-xl border cursor-pointer transition-all flex items-center justify-between ${
                 isSelected
                   ? "bg-studio-gold/10 border-studio-gold text-studio-ivory"
@@ -72,11 +64,10 @@ export const BudgetCalculator = () => {
                   {isSelected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-studio-ivory">{srv.name}</p>
-                  <span className="text-[10px] text-studio-muted uppercase tracking-wider">{srv.category}</span>
+                  <p className="text-xs font-medium text-studio-ivory">{srv.title}</p>
+                  <span className="text-[10px] text-studio-muted font-light">{srv.tagline}</span>
                 </div>
               </div>
-              <span className="text-xs font-semibold text-studio-gold">₹{srv.price.toLocaleString("en-IN")}</span>
             </div>
           );
         })}
@@ -84,16 +75,16 @@ export const BudgetCalculator = () => {
 
       <div className="pt-4 border-t border-studio-border flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs text-studio-muted max-w-md font-light">
-          * Travel and multi-city stay logistics are customized separately for destination celebrations.
+          * Based in Bengaluru. Servicing Bangalore, Konanakunte, and nearby regional destinations.
         </p>
         <a
           href={`https://wa.me/${BRAND_INFO.contact.whatsappNumber}?text=${whatsappMessage}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto px-6 py-3 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto px-7 py-3 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg shadow-studio-gold/20"
         >
           <MessageCircle className="w-4 h-4" />
-          <span>Lock In This Package on WhatsApp</span>
+          <span>Discuss Details on WhatsApp</span>
         </a>
       </div>
     </div>

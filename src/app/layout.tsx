@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { BRAND_INFO } from "@/data/content";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -20,54 +21,55 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Balaji Studios & Frames | Photography Studio in Neelankarai, Chennai",
+  title: "Punith's Creative Studio | Photography & Videography in Bangalore",
   description:
-    "Sri Balaji Studios & Frames, established in 1991, offers wedding, candid, portrait, maternity, newborn photography, videography, passport photos, printing, scanning and framing services in Neelankarai, Chennai.",
+    "Punith's Creative Studio offers professional photography and videography for weddings, events, portraits and creative studio work in Bengaluru and nearby areas.",
   keywords: [
-    "Sri Balaji Studios & Frames",
-    "Photography Studio Neelankarai",
-    "Wedding Photography Chennai",
-    "Passport photos Neelankarai",
-    "Visa photos Chennai",
-    "Photo scanning Neelankarai",
-    "Photo framing Chennai ECR",
-    "Videography Neelankarai"
+    "Punith's Creative Studio",
+    "Punith Kumar V B",
+    "Photography Studio Bengaluru",
+    "Wedding Photography Bangalore",
+    "Wedding Videography Konanakunte",
+    "Event Photography Bengaluru",
+    "Portrait Photography Bangalore",
+    "Couple Photography Karnataka",
   ],
   openGraph: {
-    title: "Sri Balaji Studios & Frames | Photography Studio in Neelankarai, Chennai",
+    title: "Punith's Creative Studio | Photography & Videography in Bangalore",
     description:
-      "Since 1991, capturing portraits, celebrations and memories while providing professional photography, videography, passport photos, printing, scanning and framing services in Neelankarai, Chennai.",
+      "Capturing emotions beyond frames. Professional photography and videography for weddings, events, portraits and creative studio work in Bengaluru, Karnataka.",
     type: "website",
     locale: "en_IN",
-    siteName: "Sri Balaji Studios & Frames",
+    siteName: "Punith's Creative Studio",
   },
   icons: {
-    icon: "/icon.png",
+    icon: "/images/logo.png",
     shortcut: "/favicon.ico",
-    apple: "/icon.png",
+    apple: "/images/logo.png",
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "PhotographyStudio",
-  "name": "Sri Balaji Studios & Frames",
-  "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
-  "telephone": "+91 98844 79061",
+  "name": BRAND_INFO.name,
+  "image": "https://punithscreativestudio.com/images/logo.png",
+  "telephone": BRAND_INFO.contact.phone,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Shop No. 4/110, Neelankarai ECR, Opposite Lenskart Opticals, Next to Indian Bank, East Coast Road",
-    "addressLocality": "Neelankarai, Chennai",
-    "addressRegion": "Tamil Nadu",
-    "postalCode": "600115",
+    "streetAddress": "JSS School Rd, Ganapathipura, Konanakunte",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560078",
     "addressCountry": "IN"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "reviewCount": "80"
+    "ratingValue": "5.0",
+    "reviewCount": "30"
   },
-  "foundingDate": "1991"
+  "priceRange": "$$",
+  "url": BRAND_INFO.contact.whatsappUrl
 };
 
 export default function RootLayout({
@@ -84,7 +86,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${fraunces.variable} ${inter.variable} bg-[#0a0a0a] text-[#f5f1ea] font-sans antialiased selection:bg-[#d4a574]/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
+        className={`${fraunces.variable} ${inter.variable} bg-[#050505] text-[#f5f1ea] font-sans antialiased selection:bg-studio-gold/30 selection:text-white flex flex-col min-h-screen pb-14 sm:pb-0`}
       >
         <ThemeProvider>
           <Navbar />

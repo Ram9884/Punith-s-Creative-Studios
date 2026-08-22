@@ -5,7 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 import { BRAND_INFO } from "@/data/content";
 
 const TOTAL_FRAMES = 120;
@@ -53,7 +54,6 @@ export function HeroReel() {
       const images = imagesRef.current;
       if (images.length === 0) return;
 
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const canvasW = canvas.width;
       const canvasH = canvas.height;
 
@@ -106,7 +106,7 @@ export function HeroReel() {
     let count = 0;
 
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
-      const img = new Image();
+      const img = new window.Image();
       const frameStr = String(i).padStart(3, "0");
       img.src = `/frames/frame_${frameStr}.webp`;
 
@@ -114,7 +114,6 @@ export function HeroReel() {
         count++;
         setLoadedCount(count);
 
-        // Draw frame_001 immediately on load
         if (i === 1 && currentFrameRef.current === -1) {
           drawFrame(0);
         }
@@ -135,7 +134,6 @@ export function HeroReel() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReducedMotion) {
-      // Static hero frame 1, no pin, no Lenis
       drawFrame(0);
       return () => {
         window.removeEventListener("resize", resizeCanvas);
@@ -178,7 +176,6 @@ export function HeroReel() {
             drawFrame(frameIndex);
           }
 
-          // Fade hero copy smoothly as scroll starts (0 to 0.15 progress)
           if (heroContentRef.current) {
             const fadeProgress = Math.max(0, 1 - self.progress * 6);
             heroContentRef.current.style.opacity = String(fadeProgress);
@@ -201,79 +198,98 @@ export function HeroReel() {
   return (
     <div
       ref={wrapperRef}
-      className="relative w-full h-[250vh] md:h-[400vh] bg-[#0a0a0a]"
+      className="relative w-full h-[250vh] md:h-[400vh] bg-[#050505]"
     >
       {/* Pinned Canvas Viewport */}
       <div
         ref={pinTargetRef}
-        className="sticky top-0 left-0 w-full h-screen overflow-hidden z-0 bg-[#0a0a0a]"
+        className="sticky top-0 left-0 w-full h-screen overflow-hidden z-0 bg-[#050505]"
       >
         <canvas
           ref={canvasRef}
-          className="w-full h-full block bg-[#0a0a0a] pointer-events-none"
+          className="w-full h-full block bg-[#050505] pointer-events-none opacity-85"
         />
 
         {/* Bottom-anchored gradient scrim for text legibility */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
 
         {/* Hero Overlay Copy */}
         <div
           ref={heroContentRef}
           className="absolute inset-0 z-10 flex flex-col justify-between p-6 md:p-12 max-w-7xl mx-auto pointer-events-auto transition-opacity duration-300"
         >
-          {/* Studio Wordmark Header */}
+          {/* Studio Header / Monogram */}
           <div className="pt-20 md:pt-24 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="font-serif text-lg md:text-xl tracking-widest text-[#f5f1ea] font-medium uppercase">
+            <div className="flex items-center gap-3">
+              <div className="relative h-10 w-10 shrink-0 rounded-full border border-studio-gold/60 bg-black p-1 shadow-md">
+                <Image
+                  src="/images/logo.png"
+                  alt={`${BRAND_INFO.name} Logo`}
+                  width={36}
+                  height={36}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <span className="font-serif text-base md:text-lg tracking-widest text-studio-ivory font-medium uppercase">
                 {BRAND_INFO.name}
               </span>
             </div>
-            <div className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs text-[#d4a574] tracking-wider font-medium">
-              <Sparkles className="w-3 h-3" />
+            <div className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-studio-gold/30 bg-black/60 backdrop-blur-md text-xs text-studio-gold tracking-wider font-medium">
+              <Sparkles className="w-3.5 h-3.5" />
               <span>{BRAND_INFO.contact.location}</span>
             </div>
           </div>
 
           {/* Hero Main Content */}
           <div className="space-y-6 max-w-3xl pb-16 md:pb-24">
-            <div className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-              <span className="text-xs uppercase tracking-widest text-[#d4a574] font-medium">
-                {BRAND_INFO.positioning}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/70 border border-studio-gold/30 backdrop-blur-md">
+              <span className="text-xs uppercase tracking-widest text-studio-gold font-semibold">
+                {BRAND_INFO.tagline}
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.08] tracking-tight text-[#f5f1ea] text-balance">
-              Three Decades of Stories, Framed Forever.
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.08] tracking-tight text-studio-ivory text-balance">
+              {BRAND_INFO.heroTagline}
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg text-[#f5f1ea]/80 font-light leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg text-studio-muted font-light leading-relaxed max-w-2xl">
               {BRAND_INFO.heroDescription}
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href="/portfolio"
-                className="px-8 py-3.5 rounded-full bg-[#d4a574] text-[#0a0a0a] font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2 shadow-xl shadow-[#d4a574]/20"
+                className="px-8 py-3.5 rounded-full bg-studio-gold text-studio-bg font-semibold text-xs uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2 shadow-xl shadow-studio-gold/20"
               >
-                <span>Explore Our Work</span>
+                <span>{BRAND_INFO.heroCTA.primary}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/inquire"
-                className="px-7 py-3.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-[#f5f1ea] font-medium text-xs uppercase tracking-widest hover:bg-white/10 transition-all"
+                className="px-7 py-3.5 rounded-full border border-studio-border bg-studio-card/80 backdrop-blur-md text-studio-ivory font-medium text-xs uppercase tracking-widest hover:border-studio-gold hover:text-studio-gold transition-all"
               >
-                <span>Book a Session</span>
+                <span>{BRAND_INFO.heroCTA.secondary}</span>
               </Link>
+              <a
+                href={BRAND_INFO.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-400 font-medium text-xs uppercase tracking-widest hover:bg-emerald-900/40 transition-all inline-flex items-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>{BRAND_INFO.heroCTA.whatsapp}</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Minimal Bottom Progress Indicator (no spinner) */}
+      {/* Progress Indicator */}
       {!isInitialReady && (
         <div className="fixed bottom-0 left-0 right-0 h-1 bg-white/10 z-50 pointer-events-none">
           <div
-            className="h-full bg-[#d4a574] transition-all duration-150 ease-out"
+            className="h-full bg-studio-gold transition-all duration-150 ease-out"
             style={{ width: `${Math.min(100, (loadedCount / TOTAL_FRAMES) * 100)}%` }}
           />
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { TESTIMONIALS } from "@/data/content";
+import { TESTIMONIALS, BRAND_INFO } from "@/data/content";
 import { Quote, Star } from "lucide-react";
 
 export const TestimonialsSection = () => {
@@ -10,13 +10,13 @@ export const TestimonialsSection = () => {
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-studio-gold/10 border border-studio-gold/30 text-studio-gold text-[10px] uppercase tracking-widest font-semibold">
             <Star className="w-3 h-3 fill-current" />
-            <span>4.4★ Rated on Google (80 Reviews)</span>
+            <span>5.0★ Rated on Google (30 Reviews)</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl text-studio-ivory">
             Kind Words From Our Clients
           </h2>
           <p className="text-xs sm:text-sm text-studio-muted font-light leading-relaxed">
-            Real experiences shared by clients who trusted Sri Balaji Studios & Frames with their special moments and photo requirements.
+            Real experiences shared by clients who trusted {BRAND_INFO.name} with their photography, videography, and album requirements.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export const TestimonialsSection = () => {
                   </div>
                 </div>
                 <p className="font-serif text-lg text-studio-ivory leading-relaxed italic">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </p>
               </div>
 
@@ -55,4 +55,4 @@ export const TestimonialsSection = () => {
       </div>
     </section>
   );
-};
+};

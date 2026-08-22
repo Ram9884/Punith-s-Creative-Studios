@@ -6,163 +6,173 @@ import {
 } from "@/types";
 
 export const BRAND_INFO = {
-  name: "Sri Balaji Studios & Frames",
-  handle: "@sribalaji_studios",
-  photographerName: "Sri Balaji Studios & Frames",
-  heroTagline: "Three Decades of Stories, Framed Forever.",
+  name: "Punith's Creative Studio",
+  handle: "@punithscreativestudio",
+  ownerName: "Punith Kumar V B",
+  positioning: "Professional Photography & Videography",
+  tagline: "Weddings • Events • Portraits",
+  coreMessage: "Capturing Emotions Beyond Frames ✨",
+  heroTagline: "Capturing Emotions Beyond Frames.",
   heroDescription:
-    "Since 1991, Sri Balaji Studios & Frames has been capturing portraits, celebrations and memories while providing professional photography, videography, printing and framing services in Neelankarai, Chennai.",
-  positioning: "Photography Studio • Est. 1991",
+    "Professional photography and videography for weddings, events, portraits and the moments worth remembering.",
+  isoClaim: "ISO Certified Photographer & Videographer",
   heroCTA: {
     primary: "Explore Our Work",
-    secondary: "Book a Session",
+    secondary: "Book a Shoot",
+    whatsapp: "WhatsApp Us",
   },
   about: {
-    heading: "Three Decades of Stories, Framed Forever",
+    heading: "More Than Just a Photograph.",
     description:
-      "Sri Balaji Studios & Frames has been serving customers in Neelankarai, Chennai since 1991. Over the years, the studio has evolved with modern photography and videography while continuing to provide dependable studio and photo services for individuals, families and celebrations.",
+      "Every photograph carries a feeling, a person and a story. Punith's Creative Studio focuses on capturing those moments naturally while creating photographs and films that remain meaningful long after the day is over.",
+  },
+  weddingSection: {
+    heading: "Weddings, Told Honestly.",
+    description:
+      "From the anticipation before the ceremony to the laughter, rituals and celebrations that follow, we capture the emotions that make your wedding yours.",
+    cta: "View Wedding Stories",
+  },
+  eventsSection: {
+    heading: "Every Celebration Has a Moment.",
+    description:
+      "From family celebrations to important events, we document the atmosphere, people and moments that deserve to be remembered.",
+    cta: "Explore Event Photography",
+  },
+  portraitsSection: {
+    heading: "Portraits With Personality.",
+    description:
+      "Professional portraits should look like you—not like everyone else.",
+  },
+  videographySection: {
+    heading: "Moments, In Motion.",
+    description:
+      "Photography preserves a moment. Film brings it back to life.",
+    cta: "Watch Our Films",
   },
   contact: {
-    location: "Neelankarai, Chennai",
+    location: "Bengaluru, Karnataka",
+    shortLocation: "Konanakunte, Bengaluru",
+    serviceArea: "Serving Bengaluru & nearby areas",
     address:
-      "Shop No. 4/110, Neelankarai ECR, Opposite Lenskart Opticals, Next to Indian Bank, East Coast Road, Neelankarai, Chennai – 600115, Tamil Nadu, India",
-    phone: "+91 98844 79061",
-    phoneRaw: "+919884479061",
-    whatsappNumber: "919884479061",
-    instagram: "Sri Balaji Studios & Frames",
-    instagramUrl: "https://wa.me/919884479061",
-    youtubeUrl: "https://wa.me/919884479061",
-    youtubeShortUrl: "https://wa.me/919884479061",
+      "JSS School Rd, Ganapathipura, Konanakunte, Bengaluru, Karnataka 560078, India",
+    secondaryAddress:
+      "3/39, Next to Brindavan Residency, JC Industrial Layout, Yelachanahalli, Bengaluru, Karnataka 560062",
+    phone: "+91 99451 75729",
+    phoneRaw: "+919945175729",
+    whatsappNumber: "919945175729",
+    whatsappUrl: "https://wa.me/919945175729",
+    secondaryPhone: "+91 98808 63515",
+    secondaryPhoneRaw: "+919880863515",
+    instagram: "@punithscreativestudio",
+    instagramUrl: "https://www.instagram.com/punithscreativestudio/",
+    youtubeUrl: "https://www.youtube.com/@PunithsPhotography",
+    facebookUrl: "https://www.facebook.com/453334131204326",
+    linktreeUrl: "https://linktr.ee/punithsphotography",
+    portfolioUrl: "https://myprofessionalacc.myportfolio.com/",
     googleMapsUrl:
-      "https://maps.google.com/?q=Sri+Balaji+Studios+%26+Frames+Neelankarai+Chennai",
+      "https://maps.google.com/?q=Punith's+Creative+Studio+Ganapathipura+Konanakunte+Bengaluru",
+    followersCount: "1.8K+ followers",
   },
   footer: {
-    brandName: "Sri Balaji Studios & Frames",
-    photographer: "Sri Balaji Studios & Frames",
-    tagline: "Photography • Videography • Printing • Scanning • Frames",
+    brandName: "Punith's Creative Studio",
+    photographer: "Punith Kumar V B",
+    tagline: "Professional Photography & Videography",
     subtext:
-      "Sri Balaji Studios & Frames | Professional photography, videography, passport/visa photos, printing, scanning & custom frames in Neelankarai, Chennai since 1991.",
+      "Punith's Creative Studio | Professional photography, videography, photo frames, album design & printing in Bengaluru, Karnataka.",
   },
 };
 
-const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - 1991;
-
 export const STATS = [
-  { value: "1991", label: "Established" },
-  { value: `${yearsOfExperience}+`, label: "Years of Experience" },
-  { value: "4.4★", label: "Google Rating" },
-  { value: "80+", label: "Google Reviews" },
+  { value: "5.0★", label: "Google Rating" },
+  { value: "30", label: "Google Reviews" },
+  { value: "2025", label: "Established" },
+  { value: "Bengaluru", label: "Based In" },
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 1,
     category: "Weddings",
-    title: "Grand Tamil Wedding Celebration",
-    location: "Neelankarai, Chennai",
-    image:
-      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
+    title: "Sacred South Indian Wedding Rituals",
+    location: "Bengaluru, Karnataka",
+    image: "/images/wedding-sample.jpg",
     description:
-      "Comprehensive wedding photography capturing authentic mandap rituals, silk nuances, and joyful family celebrations.",
+      "Capturing authentic wedding ceremonies, traditional jewelry, intricate silk details, and sincere emotional moments.",
     quote:
-      "Sri Balaji Studios & Frames captured our wedding beautifully. Every emotion and ritual was preserved with care.",
-    couple: "Ananya & Siddharth",
+      "Highly recommend Punith for anyone looking for quality photography + album work.",
+    couple: "Wedding Client",
   },
   {
     id: 2,
-    category: "Candid",
-    title: "Spontaneous Celebration Moments",
-    location: "ECR Seaside Venue, Chennai",
+    category: "Weddings",
+    title: "Vibrant Wedding Celebration & Mandap Moments",
+    location: "Bengaluru, Karnataka",
     image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Unscripted candid photography documenting natural smiles and organic joy throughout the festivities.",
-    quote: "The candid photos felt so natural and filled with life.",
-    couple: "Ritika & Rohan",
+      "Documenting sacred rituals, family joy, and timeless wedding memories with artistic detail.",
+    quote: "Very good work and delivered in a timely efficient manner.",
+    couple: "Wedding Story",
   },
   {
     id: 3,
-    category: "Portraits",
-    title: "Classic Indoor Studio Portraiture",
-    location: "Sri Balaji Studio, Neelankarai",
+    category: "Events",
+    title: "Family Celebration & Cultural Event Coverage",
+    location: "Konanakunte, Bengaluru",
     image:
-      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Professional studio portraits with refined lighting and high-clarity finishing.",
-    quote: "Superb studio & Quality's are best.",
-    couple: "Individual Portrait Client",
+      "Preserving the atmosphere, laughter, and genuine moments of family functions and community celebrations.",
+    quote: "I had a shoot session with Punith and I had a great experience.",
+    couple: "Event Client",
   },
   {
     id: 4,
-    category: "Maternity",
-    title: "Maternity & Motherhood Portraits",
-    location: "Mahabalipuram Coastal Sunrise",
+    category: "Portraits",
+    title: "Editorial Studio Portraiture",
+    location: "Punith's Creative Studio, Bengaluru",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Beautiful maternity portraits designed to preserve this special stage of life.",
-    quote: "Gentle and patient studio session. The final prints look stunning in our home.",
-    couple: "Kavya S.",
+      "Thoughtful individual portraits crafted with precise lighting, character, and natural expression.",
+    quote: "Highly recommended for professional portrait shoots.",
+    couple: "Portrait Client",
   },
   {
     id: 5,
-    category: "Newborn",
-    title: "Newborn & Milestone Memories",
-    location: "Sri Balaji Studio, Neelankarai",
+    category: "Couples",
+    title: "Expressive Outdoor Couple Session",
+    location: "Bengaluru Scenic Location",
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Gentle and memorable photography for newborns and growing families.",
-    quote: "Carefully handled and captured baby expressions beautifully.",
-    couple: "Deepika & Ashwin",
+      "Natural and expressive photographs built around genuine connection and candid warmth.",
+    quote: "Captured our connection effortlessly.",
+    couple: "Couple Session",
   },
   {
     id: 6,
-    category: "Photo Frames",
-    title: "Custom Heirloom Wood & Acrylic Framing",
-    location: "Sri Balaji Frames Workshop",
-    image:
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1200&auto=format&fit=crop",
-    description:
-      "Turn your favorite photographs into durable, elegantly framed wall art and desktop displays.",
-    quote: "Superb framing quality and fast delivery. Very satisfied!",
-    couple: "Framing Client",
-  },
-];
-
-export const WEDDING_FILMS = [
-  {
-    id: "film-1",
-    title: "Wedding Stories — Celebration Highlight",
-    location: "Neelankarai, Chennai",
-    duration: "4K Film",
-    image:
-      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200&auto=format&fit=crop",
-    videoUrl:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    description:
-      "From intimate moments to grand celebrations, preserve the emotions, people and memories that make your wedding unforgettable.",
-  },
-  {
-    id: "film-2",
-    title: "Celebration & Reception Coverage",
-    location: "ECR Beachfront Venue, Chennai",
-    duration: "Full HD Video",
+    category: "Videography",
+    title: "Cinematic Wedding & Event Film Coverage",
+    location: "Bengaluru, Karnataka",
     image:
       "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop",
+    videoUrl: "https://www.youtube.com/@PunithsPhotography",
+    duration: "Cinematic Film",
     description:
-      "Professional videography documenting grand stage entries, musical events, and family gatherings.",
+      "Preserving the movement, voices, emotions and atmosphere of celebrations through beautifully crafted films.",
+    quote: "Preserved our wedding memories in motion beautifully.",
+    couple: "Videography Client",
   },
 ];
 
 export const SERVICES: ServiceItem[] = [
   {
     id: "wedding-photography",
-    title: "Wedding Photography 📸",
+    title: "Wedding Photography",
     tagline: "Capture important moments, emotions & celebrations.",
     description:
-      "Capture the important moments, emotions and celebrations of weddings with dependable photography and coverage.",
+      "From intimate emotions to grand celebrations, capture the moments that make your wedding uniquely yours.",
     deliverables: [
       "High-resolution color-corrected photo gallery",
       "Traditional & candid event coverage",
@@ -171,152 +181,126 @@ export const SERVICES: ServiceItem[] = [
     categoryFilter: "Weddings",
   },
   {
-    id: "candid-photography",
-    title: "Candid Photography ✨",
-    tagline: "Natural and spontaneous moments captured effortlessly.",
+    id: "wedding-videography",
+    title: "Wedding Videography",
+    tagline: "Preserve movement, sound & emotion.",
     description:
-      "Natural and spontaneous moments captured throughout your celebration without forced poses.",
+      "Preserve the movement, voices, emotions and atmosphere of your celebration through beautifully crafted films.",
     deliverables: [
-      "Unscripted ceremony & reception moments",
-      "High-resolution digital downloads",
-      "Express selection turnaround",
+      "High-definition event film coverage",
+      "Edited highlight reel & ceremony footage",
+      "Digital delivery via drive or USB",
     ],
-    categoryFilter: "Candid",
+    categoryFilter: "Videography",
+  },
+  {
+    id: "event-photography",
+    title: "Event Photography",
+    tagline: "Coverage for celebrations & functions.",
+    description:
+      "Professional coverage for celebrations, functions and important events across Bengaluru.",
+    deliverables: [
+      "Comprehensive event coverage",
+      "High-resolution digital delivery",
+      "Atmospheric group & candid shots",
+    ],
+    categoryFilter: "Events",
   },
   {
     id: "portrait-photography",
-    title: "Portrait Photography 👤",
-    tagline: "Professional portraits for individuals & families.",
+    title: "Portrait Photography",
+    tagline: "Thoughtful portraits capturing character.",
     description:
-      "Professional portraits for individuals, families and special occasions in controlled studio lighting or scenic outdoor settings.",
+      "Thoughtful portraits that capture personality, confidence and character in studio or outdoor lighting.",
     deliverables: [
-      "Controlled studio studio lighting setup",
-      "High-definition retouching & color grade",
-      "Ready-to-print digital files",
+      "Professional studio lighting setup",
+      "High-definition retouching & finishing",
+      "Print-ready high resolution files",
     ],
     categoryFilter: "Portraits",
   },
   {
-    id: "maternity-photography",
-    title: "Maternity Photography 🤰",
-    tagline: "Preserve life's most meaningful beginnings.",
+    id: "couple-photography",
+    title: "Couple Photography",
+    tagline: "Natural expressive connection.",
     description:
-      "Beautiful maternity portraits designed to preserve this special stage of life with comfort and elegance.",
+      "Natural and expressive photographs built around connection and genuine moments.",
     deliverables: [
-      "Comfortable indoor studio or outdoor shoot",
-      "Family & partner portrait inclusion",
-      "Custom photo print options",
+      "Guided outdoor or studio session",
+      "Color-graded portrait gallery",
+      "Framing & album options",
     ],
-    categoryFilter: "Maternity",
+    categoryFilter: "Couples",
   },
   {
-    id: "newborn-photography",
-    title: "Newborn Photography 👶",
-    tagline: "Gentle and memorable photography for newborns.",
+    id: "album-design",
+    title: "Album Design",
+    tagline: "Lasting visual story presentation.",
     description:
-      "Gentle and memorable photography for newborns and growing families in a safe, peaceful environment.",
+      "Thoughtfully arranged photographs presented as a lasting visual story and premium physical album.",
     deliverables: [
-      "Warm & comfortable studio environment",
-      "Gentle child-first session pacing",
-      "High-resolution memory archive",
+      "Custom layout curation",
+      "High-durability photo binding",
+      "Heirloom presentation finish",
     ],
-    categoryFilter: "Newborn",
+    categoryFilter: "Weddings",
   },
   {
-    id: "studio-photography",
-    title: "Studio Photography 🏢",
-    tagline: "Professional indoor photography.",
+    id: "photo-editing",
+    title: "Photo Editing",
+    tagline: "Professional image enhancement.",
     description:
-      "Professional indoor photography for portraits, family photos, corporate profiles, and special requirements.",
+      "Professional image enhancement, color grading, and creative post-production.",
     deliverables: [
-      "State-of-the-art studio background options",
-      "Instant review and selection",
-      "Same-day or fast digital delivery",
+      "Skin retouching & tone balance",
+      "Color correction & contrast enhancement",
+      "High-clarity export for digital & print",
     ],
-    categoryFilter: "Studio",
+    categoryFilter: "Portraits",
   },
   {
-    id: "videography",
-    title: "Videography 🎬",
-    tagline: "Professional video coverage for events.",
+    id: "video-editing",
+    title: "Video Editing",
+    tagline: "Polished visual storytelling.",
     description:
-      "Professional video coverage for weddings, celebrations, corporate functions and special occasions.",
+      "Professional editing for polished and engaging visual stories and event films.",
     deliverables: [
-      "High-definition / 4K event recording",
-      "Edited highlight reel & ceremony footage",
-      "Digital delivery via drive or USB",
+      "Seamless audio-visual sync",
+      "Cinematic color grading",
+      "Export ready for social & archival",
     ],
-    categoryFilter: "Celebrations",
-  },
-  {
-    id: "passport-visa-photos",
-    title: "Passport & Visa Photos 🛂",
-    tagline: "Quick professional passport and visa photographs.",
-    description:
-      "Quick professional passport and visa photographs adhering strictly to government and international embassy specifications.",
-    deliverables: [
-      "Biometric compliance for all countries",
-      "Quick turnaround within 30 minutes",
-      "Printed photo sheet + digital copy",
-    ],
-    categoryFilter: "Quick Photo Services",
-  },
-  {
-    id: "photo-printing-scanning",
-    title: "Photo Printing & Scanning 🖨️",
-    tagline: "High-quality prints & digital restoration.",
-    description:
-      "Photo printing, high-resolution scanning, photo enlargement, and digital restoration studio services.",
-    deliverables: [
-      "Glossy, matte & luster photo papers",
-      "High-resolution archival scanning",
-      "Old photo digitizing & scratch repair",
-    ],
-    categoryFilter: "Quick Photo Services",
-  },
-  {
-    id: "photo-frames",
-    title: "Photo Frames 🖼️",
-    tagline: "Preserve photographs with professional framing options.",
-    description:
-      "Preserve photographs with professional framing options, custom border mats, and durable wall mounts.",
-    deliverables: [
-      "Wide selection of wooden & modern frames",
-      "Glass & acrylic protective face options",
-      "Custom sizing & tabletop mounts",
-    ],
-    categoryFilter: "Photo Frames",
+    categoryFilter: "Videography",
   },
 ];
 
 export const EXPERIENCE_STEPS: ExperienceStep[] = [
   {
     step: "01",
-    title: "Visit or Call Us",
-    subtitle: "Inquire & Studio Visit",
+    title: "Connect & Consult",
+    subtitle: "Share Your Vision",
     description:
-      "Visit our studio at Neelankarai ECR or call +91 98844 79061 to discuss your requirements.",
+      "Contact Punith's Creative Studio via WhatsApp (+91 99451 75729) or call us to discuss your wedding, event, or portrait session requirements.",
   },
   {
     step: "02",
-    title: "Plan Your Session",
-    subtitle: "Schedule & Requirements",
+    title: "Plan Your Shoot",
+    subtitle: "Dates & Creative Details",
     description:
-      "We help choose the right service — whether it is event photography, studio portraits, visa photos, or framing.",
+      "We plan timing, lighting, location, and key moments to ensure effortless and authentic coverage on your shoot day.",
   },
   {
     step: "03",
-    title: "Capture & Create",
+    title: "Capture & Record",
     subtitle: "Professional Execution",
     description:
-      "Our team provides patient studio sessions, quick photo processing, or comprehensive event coverage.",
+      "Our team documents your special day with creative vision, focus on natural emotion, and professional equipment.",
   },
   {
     step: "04",
-    title: "Deliver & Frame",
-    subtitle: "Prints, Films & Frames",
+    title: "Edit & Deliver",
+    subtitle: "Films, Prints & Albums",
     description:
-      "Receive high-clarity photos, edited videos, quick prints, or beautifully framed heirloom memories.",
+      "Receive color-graded photo galleries, edited event films, custom album designs, or wall framing.",
   },
 ];
 
@@ -324,55 +308,51 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 1,
     quote:
-      "Went for passport/visa photos got done within 30 minutes.",
-    author: "Satisfied Customer",
-    event: "Passport & Visa Photo Service",
-    location: "Neelankarai, Chennai",
+      "Highly recommend Punith for anyone looking for quality photography + album work.",
+    author: "Manjunath V",
+    event: "Photography & Album Service",
+    location: "Bengaluru, Karnataka",
     rating: 5,
-    image:
-      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=600&auto=format&fit=crop",
+    image: "/images/wedding-sample.jpg",
   },
   {
     id: 2,
-    quote:
-      "Superb studio & Quality's are best.",
-    author: "Local Resident",
-    event: "Studio Photography & Framing",
-    location: "Neelankarai, Chennai",
+    quote: "Very good work and delivered in a timely efficient manner.",
+    author: "Nandhini",
+    event: "Event & Photography Service",
+    location: "Bengaluru, Karnataka",
     rating: 5,
     image:
       "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 3,
-    quote:
-      "I visited for passport scan and visa photo. good service they provide.",
-    author: "Verified Reviewer",
-    event: "Photo Scanning & Visa Photos",
-    location: "Neelankarai, Chennai",
+    quote: "I had a shoot session with Punith and I had a great experience.",
+    author: "Vikas J.P",
+    event: "Shoot Session",
+    location: "Bengaluru, Karnataka",
     rating: 5,
     image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=80&w=600&auto=format&fit=crop",
   },
 ];
 
 export const SOCIAL_MOMENTS = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop",
+    image: "/images/wedding-sample.jpg",
     type: "photo",
   },
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=600&auto=format&fit=crop",
     type: "reel",
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=600&auto=format&fit=crop",
     type: "photo",
   },
   {
@@ -384,52 +364,13 @@ export const SOCIAL_MOMENTS = [
   {
     id: 5,
     image:
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop",
     type: "photo",
   },
   {
     id: 6,
     image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600&auto=format&fit=crop",
-    type: "photo",
-  },
-];
-
-export const CALCULATOR_SERVICES = [
-  {
-    id: "wedding_coverage",
-    name: "Wedding Photography & Video Coverage",
-    price: 45000,
-    category: "Wedding",
-  },
-  {
-    id: "candid_photography",
-    name: "Candid Celebration Photography",
-    price: 25000,
-    category: "Candid",
-  },
-  {
-    id: "portrait_studio",
-    name: "Indoor Studio Family / Individual Portrait",
-    price: 5000,
-    category: "Studio",
-  },
-  {
-    id: "maternity_newborn",
-    name: "Maternity / Newborn Photography Session",
-    price: 15000,
-    category: "Maternity",
-  },
-  {
-    id: "passport_visa",
-    name: "Passport & Visa Photos (Instant Print Set)",
-    price: 250,
-    category: "Studio Service",
-  },
-  {
-    id: "custom_framing",
-    name: "Custom Photo Framing & Enlargement Print",
-    price: 3500,
-    category: "Framing",
+      "https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=600&auto=format&fit=crop",
+    type: "reel",
   },
 ];

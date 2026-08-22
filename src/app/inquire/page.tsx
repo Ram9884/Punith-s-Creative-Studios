@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, Phone, MapPin, Send, Check, Calendar, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Phone, MapPin, Send, Check, Calendar, Loader2, ExternalLink } from "lucide-react";
 import { BRAND_INFO } from "@/data/content";
 
 export default function InquirePage() {
@@ -20,7 +21,7 @@ export default function InquirePage() {
   const handleDateCheck = (date: string) => {
     setWeddingDate(date);
     if (date) {
-      setAvailabilityStatus("Dates around this weekend are filling fast. Submit inquiry to reserve.");
+      setAvailabilityStatus("Dates around this timeframe are being reserved. Submit inquiry to lock in details.");
     } else {
       setAvailabilityStatus(null);
     }
@@ -62,24 +63,24 @@ export default function InquirePage() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Sri Balaji Studios & Frames, I'm inquiring about date availability / session details for ${weddingDate || "my event"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
+    `Hello ${BRAND_INFO.name}, I'm inquiring about date availability / session details for ${weddingDate || "my shoot"}.\nName: ${name || "Client"}\nPhone: ${phone || ""}`
   );
 
   return (
     <main className="max-w-7xl mx-auto px-6 pt-10 sm:pt-14 pb-16">
       <div className="max-w-3xl space-y-4 mb-12">
         <span className="text-xs uppercase tracking-widest text-studio-gold font-medium">Start The Conversation</span>
-        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Contact Sri Balaji Studios & Frames</h1>
+        <h1 className="font-serif text-4xl sm:text-6xl font-normal">Contact {BRAND_INFO.name}</h1>
         <p className="text-sm text-studio-muted font-light leading-relaxed">
-          Tell us about your requirement or celebration. Operating since 1991 in Neelankarai, Chennai, our team provides wedding photography, candid shoots, studio portraits, visa photos, scanning, printing and custom photo framing.
+          Tell us about your upcoming wedding, celebration, portrait session, or video editing requirement in Bengaluru, Karnataka.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {/* Contact Info Sidebar */}
         <div className="space-y-8 lg:col-span-1">
-          <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6">
-            <h3 className="font-serif text-xl text-studio-ivory font-medium">Direct Inquiries</h3>
+          <div className="p-6 rounded-2xl bg-studio-card border border-studio-border space-y-6 shadow-xl">
+            <h3 className="font-serif text-xl text-studio-ivory font-medium">Direct Contact</h3>
 
             <div className="space-y-4 text-xs">
               <a
@@ -93,22 +94,27 @@ export default function InquirePage() {
                 </div>
                 <div>
                   <p className="text-studio-ivory font-medium">WhatsApp (Instant Chat)</p>
-                  <p className="text-studio-gold font-medium">{BRAND_INFO.contact.phone}</p>
+                  <p className="text-emerald-400 font-medium">{BRAND_INFO.contact.phone}</p>
                 </div>
               </a>
 
-              <a
-                href={`tel:${BRAND_INFO.contact.phoneRaw}`}
-                className="flex items-center gap-3 text-studio-muted hover:text-studio-gold transition-colors"
-              >
+              <div className="flex items-center gap-3 text-studio-muted">
                 <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <p className="text-studio-ivory font-medium">Call Studio</p>
-                  <p>{BRAND_INFO.contact.phone}</p>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <a href={`tel:${BRAND_INFO.contact.phoneRaw}`} className="hover:text-studio-gold text-studio-ivory font-medium">
+                      {BRAND_INFO.contact.phone}
+                    </a>
+                    <span>/</span>
+                    <a href={`tel:${BRAND_INFO.contact.secondaryPhoneRaw}`} className="hover:text-studio-gold">
+                      {BRAND_INFO.contact.secondaryPhone}
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
 
               <div className="flex items-start gap-3 text-studio-muted">
                 <div className="w-8 h-8 rounded-full bg-studio-gold/10 flex items-center justify-center text-studio-gold flex-shrink-0 mt-0.5">
@@ -117,16 +123,40 @@ export default function InquirePage() {
                 <div>
                   <p className="text-studio-ivory font-medium">Studio Location</p>
                   <p className="text-[11px] leading-relaxed mt-0.5">{BRAND_INFO.contact.address}</p>
+                  <p className="text-[10px] text-studio-muted/80 leading-relaxed mt-1">
+                    Landmark / Secondary: {BRAND_INFO.contact.secondaryAddress}
+                  </p>
+                  <a
+                    href={BRAND_INFO.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-studio-gold hover:underline mt-2 font-medium"
+                  >
+                    <span>View on Google Maps</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl border border-studio-border/60 bg-studio-card/30 text-xs text-studio-muted space-y-2">
-            <p className="font-semibold text-studio-ivory uppercase tracking-wider">Studio Operating Hours</p>
-            <p className="font-light leading-relaxed">
-              Open daily in Neelankarai, ECR Chennai. Walk-ins welcome for passport/visa photos, prints, scanning, and photo frames.
-            </p>
+          {/* Physical Storefront Photograph Card */}
+          <div className="p-4 rounded-2xl bg-studio-card border border-studio-border space-y-3 shadow-lg">
+            <div className="relative h-48 rounded-xl overflow-hidden border border-studio-border">
+              <Image
+                src="/images/storefront.jpg"
+                alt="Punith's Creative Studio Physical Storefront in Bengaluru"
+                fill
+                sizes="350px"
+                className="object-cover"
+              />
+            </div>
+            <div className="text-xs">
+              <p className="font-semibold text-studio-ivory font-serif">Visit Our Studio in Bengaluru</p>
+              <p className="text-[11px] text-studio-muted font-light mt-0.5">
+                Konanakunte, Bengaluru • Servicing Bengaluru & nearby regional areas.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -139,7 +169,7 @@ export default function InquirePage() {
               </div>
               <h3 className="font-serif text-3xl text-studio-ivory">Inquiry Received!</h3>
               <p className="text-xs text-studio-muted max-w-md mx-auto leading-relaxed font-light">
-                Thank you for reaching out to Sri Balaji Studios & Frames. We have received your message and will get back to you via call or WhatsApp shortly.
+                Thank you for reaching out to {BRAND_INFO.name}. We have received your details and will connect with you via call or WhatsApp shortly.
               </p>
               <div className="pt-4">
                 <a
@@ -154,7 +184,7 @@ export default function InquirePage() {
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-2xl bg-studio-card border border-studio-border space-y-6">
+            <form onSubmit={handleSubmit} className="p-8 sm:p-10 rounded-2xl bg-studio-card border border-studio-border space-y-6 shadow-xl">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Your Name *</label>
@@ -163,7 +193,7 @@ export default function InquirePage() {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="e.g. Ananya & Siddharth"
+                    placeholder="Your Full Name"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
@@ -175,7 +205,7 @@ export default function InquirePage() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+91 98844 79061"
+                    placeholder="+91 99451 75729"
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   />
                 </div>
@@ -183,31 +213,30 @@ export default function InquirePage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Category *</label>
+                  <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Service Category *</label>
                   <select
                     required
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                   >
-                    <option value="Weddings">Weddings</option>
-                    <option value="Candid Photography">Candid Photography</option>
-                    <option value="Portraits & Family">Portraits & Family</option>
-                    <option value="Maternity & Newborn">Maternity & Newborn</option>
-                    <option value="Passport & Visa Photos">Passport & Visa Photos</option>
-                    <option value="Photo Printing & Scanning">Photo Printing & Scanning</option>
-                    <option value="Custom Photo Frames">Custom Photo Frames</option>
-                    <option value="Videography">Videography</option>
+                    <option value="Weddings">Wedding Photography</option>
+                    <option value="Wedding Videography">Wedding Videography</option>
+                    <option value="Event Photography">Event Photography</option>
+                    <option value="Portrait Photography">Portrait Photography</option>
+                    <option value="Couple Photography">Couple Photography</option>
+                    <option value="Album Design">Album Design</option>
+                    <option value="Photo Editing">Photo Editing</option>
+                    <option value="Video Editing">Video Editing</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-wider text-studio-muted font-medium flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-studio-gold" />
-                    <span>Shoot / Event Date *</span>
+                    <span>Shoot / Event Date</span>
                   </label>
                   <input
-                    required
                     type="date"
                     value={weddingDate}
                     onChange={(e) => handleDateCheck(e.target.value)}
@@ -224,23 +253,23 @@ export default function InquirePage() {
               )}
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Venues & City</label>
+                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Event Location / Venue</label>
                 <input
                   type="text"
                   value={venue}
                   onChange={(e) => setVenue(e.target.value)}
-                  placeholder="e.g. Chennai / ECR Estate / Destination Venue"
+                  placeholder="e.g. Bengaluru / Konanakunte / Regional Location"
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Tell us about your story & vision</label>
+                <label className="text-xs uppercase tracking-wider text-studio-muted font-medium">Tell us about your shoot requirements</label>
                 <textarea
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Share details about your events, vision, or guest expectations..."
+                  placeholder="Share details about your wedding events, portrait expectations, or video editing needs..."
                   className="w-full px-4 py-3 rounded-lg bg-studio-bg border border-studio-border text-xs text-studio-ivory focus:outline-none focus:border-studio-gold resize-none"
                 />
               </div>

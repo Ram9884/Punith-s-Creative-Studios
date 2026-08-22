@@ -10,9 +10,10 @@ interface ConsultationModalProps {
 }
 
 const CALL_TOPICS = [
-  "15-Min Wedding Vision & Package Overview",
-  "Pre-Wedding & Destination Shoot Planning",
-  "Custom Package & Budget Discussion",
+  "Wedding Photography & Film Vision",
+  "Pre-Wedding & Outdoor Session Planning",
+  "Event & Celebration Coverage",
+  "Portrait & Studio Session Inquiry",
 ];
 
 const TIME_SLOTS = [
@@ -20,10 +21,8 @@ const TIME_SLOTS = [
   "02:30 PM",
   "05:00 PM",
   "07:30 PM",
-  "09:00 PM",
 ];
 
-// Generate next 6 days for booking
 const getAvailableDates = () => {
   const dates = [];
   const today = new Date();
@@ -80,7 +79,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hello Sri Balaji Studios & Frames, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
+    `Hello ${BRAND_INFO.name}, I scheduled a consultation on your website for ${selectedDate} at ${selectedTime}.\nName: ${name}\nTopic: ${selectedTopic}`
   );
 
   const resetAndClose = () => {
@@ -99,7 +98,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4 text-studio-gold" />
             <span className="text-xs uppercase tracking-[0.25em] text-studio-gold font-semibold">
-              Book Your Shoot Consultation
+              Book Your Consultation
             </span>
           </div>
           <button
@@ -122,14 +121,14 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                   <span>1-on-1 Creative Consultation</span>
                 </div>
                 <p className="text-xs text-studio-muted font-light">
-                  Pick a convenient time to speak directly with our team about your wedding vision, dates, and customized packages.
+                  Pick a convenient time to speak directly with Punith about your wedding, event, or portrait shoot requirements.
                 </p>
               </div>
 
               {/* Topic Selection */}
               <div className="space-y-2">
                 <label className="block text-[11px] uppercase tracking-widest text-studio-muted font-medium">
-                  1. Select Discussion Topic
+                  1. Select Topic
                 </label>
                 <div className="space-y-2">
                   {CALL_TOPICS.map((topic) => (
@@ -152,7 +151,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
               {/* Date Selection */}
               <div className="space-y-2">
                 <label className="block text-[11px] uppercase tracking-widest text-studio-muted font-medium">
-                  2. Choose Consultation Date
+                  2. Choose Date
                 </label>
                 <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                   {dates.map((d) => {
@@ -272,7 +271,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
               <div className="p-4 rounded-xl bg-studio-bg border border-studio-border text-left text-xs space-y-1.5 max-w-sm mx-auto">
                 <p className="text-studio-ivory"><strong>Topic:</strong> {selectedTopic}</p>
                 <p className="text-studio-ivory"><strong>Client Name:</strong> {name}</p>
-                <p className="text-studio-muted text-[11px]">Invite & details will be sent to <strong>{phone}</strong>.</p>
+                <p className="text-studio-muted text-[11px]">Details sent to <strong>{phone}</strong>.</p>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -300,4 +299,3 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
     </div>
   );
 };
-
